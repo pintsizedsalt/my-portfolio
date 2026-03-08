@@ -1,0 +1,569 @@
+/* =============================================
+   SPICE PAGE — Pastel Green + Pastel Blue
+   Dark Green Gradient Background
+   ============================================= */
+
+:root {
+  --sp-green:         #a8f0c6;
+  --sp-green-pale:    #c9f7df;
+  --sp-green-border:  rgba(168,240,198,0.22);
+
+  --sp-blue:          #a8d8f0;
+  --sp-blue-pale:     #c9e8f7;
+  --sp-blue-border:   rgba(168,216,240,0.22);
+
+  --sp-navy:          #050f0a;
+  --sp-navy-card:     #091a11;
+  --sp-navy-hover:    #0e2418;
+}
+
+body {
+  background: linear-gradient(160deg, #050e08 0%, #081508 40%, #050d07 100%);
+  min-height: 100vh;
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+
+#spice-hero {
+  position:relative; padding:8rem 4rem 5rem;
+  overflow:hidden; border-bottom:1px solid rgba(168,216,240,0.1);
+}
+
+.spice-hero-glow { position:absolute; pointer-events:none; z-index:0; }
+.spice-hero-glow.g1 {
+  width:600px; height:600px; border-radius:50%;
+  background:radial-gradient(circle, rgba(168,240,198,0.1) 0%, transparent 65%);
+  top:-150px; right:-100px;
+}
+.spice-hero-glow.g2 {
+  width:400px; height:400px; border-radius:50%;
+  background:radial-gradient(circle, rgba(168,216,240,0.09) 0%, transparent 65%);
+  bottom:-100px; left:5%;
+}
+
+.spice-hero-inner {
+  position:relative; z-index:2; max-width:1300px; margin:0 auto;
+  display:flex; align-items:flex-end; justify-content:space-between; gap:3rem;
+}
+.spice-hero-left { flex:1; }
+
+.spice-eyebrow {
+  display:inline-flex; align-items:center; gap:0.8rem; margin-bottom:1.2rem;
+  opacity:0; animation:spiceFadeUp 0.8s 0.2s forwards;
+}
+.spice-eyebrow-dot {
+  width:6px; height:6px; border-radius:50%;
+  background:var(--sp-green); box-shadow:0 0 8px var(--sp-green);
+  animation:spicePulse 2.5s infinite;
+}
+.spice-eyebrow-text {
+  font-family:'Space Mono',monospace; font-size:0.6rem;
+  letter-spacing:0.3em; text-transform:uppercase; color:var(--sp-green-pale);
+}
+
+.spice-title {
+  font-family:'Playfair Display',serif; font-weight:900; line-height:0.95;
+  opacity:0; animation:spiceFadeUp 0.9s 0.4s forwards;
+}
+.spice-title-sub {
+  display:block; font-size:clamp(1rem,2vw,1.3rem); font-weight:400;
+  font-style:italic; color:var(--muted); letter-spacing:0.06em; margin-bottom:0.4rem;
+}
+.spice-title-main { display:block; font-size:clamp(3.5rem,7vw,6rem); color:var(--text); }
+.spice-title-accent { color:transparent; -webkit-text-stroke:1.5px var(--sp-green-pale); font-style:italic; }
+
+.spice-desc {
+  margin-top:1.8rem; font-size:1rem; font-weight:300;
+  color:var(--muted); line-height:1.9; max-width:520px;
+  opacity:0; animation:spiceFadeUp 0.8s 0.6s forwards;
+}
+
+.spice-hero-right {
+  flex-shrink:0; display:flex; flex-direction:column; align-items:flex-end; gap:0.8rem;
+  opacity:0; animation:spiceFadeIn 1s 0.8s forwards;
+}
+.spice-stat-row { display:flex; gap:2.5rem; }
+.spice-stat { text-align:right; }
+.spice-stat-num { font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:700; color:var(--sp-green); line-height:1; }
+.spice-stat-lbl { font-family:'Space Mono',monospace; font-size:0.5rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin-top:0.25rem; }
+
+/* =============================================
+   SECTION TAG
+   ============================================= */
+
+.spice-section-tag {
+  font-family:'Space Mono',monospace; font-size:0.6rem;
+  letter-spacing:0.3em; text-transform:uppercase; color:var(--sp-blue-pale);
+  margin-bottom:2.5rem; display:flex; align-items:center; gap:1rem;
+}
+.spice-section-tag::after {
+  content:''; flex:1; height:1px;
+  background:linear-gradient(to right, rgba(168,216,240,0.3), transparent);
+}
+
+/* =============================================
+   RECIPES SECTION
+   ============================================= */
+
+#spice-recipes { padding:5rem 4rem 1rem; max-width:1300px; margin:0 auto; }
+
+/* GRID */
+.recipe-grid {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1px; background:rgba(168,216,240,0.08);
+  border:1px solid rgba(168,216,240,0.1);
+}
+
+/* CARD */
+.recipe-card {
+  position:relative; overflow:hidden;
+  background:var(--sp-navy-card); cursor:pointer;
+  display:flex; flex-direction:column;
+  transition:background 0.3s;
+}
+.recipe-card:hover { background:var(--sp-navy-hover); }
+
+.recipe-scan {
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  background:repeating-linear-gradient(
+    0deg, transparent, transparent 3px,
+    rgba(168,216,240,0.012) 3px, rgba(168,216,240,0.012) 4px
+  );
+}
+
+.recipe-card::before {
+  content:''; position:absolute; left:0; top:0; bottom:0; width:3px; z-index:2;
+  background:linear-gradient(to bottom, var(--sp-blue-pale), var(--sp-blue));
+  opacity:0; transition:opacity 0.35s;
+}
+.recipe-card:hover::before { opacity:1; }
+
+/* IMAGE */
+.recipe-img-wrap { position:relative; width:100%; height:200px; overflow:hidden; flex-shrink:0; }
+.recipe-img { width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.82); transition:filter 0.4s, transform 0.5s; }
+.recipe-card:hover .recipe-img { filter:brightness(1); transform:scale(1.04); }
+.recipe-img-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to top, var(--sp-navy-card) 0%, transparent 55%);
+}
+
+/* corners */
+.recipe-corner { position:absolute; width:14px; height:14px; z-index:3; transition:all 0.35s; }
+.recipe-corner.tl { top:8px; left:8px; border-top:1.5px solid var(--sp-blue); border-left:1.5px solid var(--sp-blue); opacity:0.5; }
+.recipe-corner.tr { top:8px; right:8px; border-top:1.5px solid var(--sp-blue); border-right:1.5px solid var(--sp-blue); opacity:0.5; }
+.recipe-corner.bl { bottom:8px; left:8px; border-bottom:1.5px solid var(--sp-blue); border-left:1.5px solid var(--sp-blue); opacity:0.5; }
+.recipe-corner.br { bottom:8px; right:8px; border-bottom:1.5px solid var(--sp-blue); border-right:1.5px solid var(--sp-blue); opacity:0.5; }
+.recipe-card:hover .recipe-corner { width:18px; height:18px; opacity:1; }
+
+.recipe-badge {
+  position:absolute; top:10px; left:10px; z-index:4;
+  font-family:'Space Mono',monospace; font-size:0.42rem;
+  letter-spacing:0.16em; text-transform:uppercase;
+  padding:0.22rem 0.65rem;
+  background:rgba(168,216,240,0.18); border:1px solid rgba(168,216,240,0.4);
+  color:var(--sp-blue-pale); backdrop-filter:blur(8px); border-radius:2px;
+}
+.recipe-img-meta {
+  position:absolute; bottom:10px; right:10px; z-index:4; display:flex; gap:0.7rem;
+}
+.recipe-meta-item {
+  display:flex; align-items:center; gap:0.3rem;
+  font-family:'Space Mono',monospace; font-size:0.44rem;
+  letter-spacing:0.1em; text-transform:uppercase;
+  color:rgba(241,240,255,0.7);
+}
+
+/* hover hint */
+.recipe-hover-hint {
+  position:absolute; inset:0; z-index:5;
+  background:rgba(7,16,30,0.5);
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transition:opacity 0.3s;
+}
+.recipe-card:hover .recipe-hover-hint { opacity:1; }
+.recipe-hint-text {
+  font-family:'Space Mono',monospace; font-size:0.55rem;
+  letter-spacing:0.2em; text-transform:uppercase; color:var(--sp-blue-pale);
+  display:flex; align-items:center; gap:0.5rem;
+  border:1px solid rgba(168,216,240,0.35); padding:0.5rem 1.1rem;
+  background:rgba(7,16,30,0.75); backdrop-filter:blur(8px);
+}
+
+/* CARD BODY */
+.recipe-body {
+  position:relative; z-index:3; padding:1.2rem 1.4rem 1.5rem;
+  display:flex; flex-direction:column; gap:0.65rem; flex:1;
+}
+
+.recipe-title-row { display:flex; align-items:flex-start; justify-content:space-between; gap:0.8rem; }
+.recipe-name { font-family:'Playfair Display',serif; font-size:1.05rem; font-weight:700; color:var(--text); line-height:1.25; }
+.recipe-difficulty { font-family:'Space Mono',monospace; font-size:0.42rem; letter-spacing:0.14em; text-transform:uppercase; padding:0.22rem 0.6rem; border-radius:2px; flex-shrink:0; }
+.recipe-difficulty.easy   { background:rgba(168,216,240,0.1); border:1px solid rgba(168,216,240,0.3); color:var(--sp-blue-pale); }
+.recipe-difficulty.medium { background:rgba(168,216,240,0.08); border:1px solid rgba(168,216,240,0.25); color:var(--sp-blue-pale); }
+.recipe-difficulty.hard   { background:rgba(100,180,240,0.1);  border:1px solid rgba(100,180,240,0.3);  color:#a8d8f0; }
+
+.recipe-desc-text {
+  font-size:0.82rem; color:var(--muted); line-height:1.75; font-weight:300;
+  display:-webkit-box; -webkit-box-orient:vertical; overflow:hidden;
+}
+
+/* preview pills */
+.recipe-preview-pills { display:flex; flex-wrap:wrap; gap:0.35rem; }
+.recipe-preview-pill {
+  font-family:'Space Mono',monospace; font-size:0.42rem;
+  letter-spacing:0.1em; text-transform:uppercase;
+  padding:0.2rem 0.55rem;
+  background:rgba(168,216,240,0.06); border:1px solid rgba(168,216,240,0.18);
+  color:rgba(201,232,247,0.7); border-radius:2px;
+}
+.recipe-preview-more {
+  font-family:'Space Mono',monospace; font-size:0.42rem;
+  letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--sp-blue-pale); opacity:0.7; padding:0.2rem 0.3rem; align-self:center;
+}
+
+/* =============================================
+   MODAL
+   ============================================= */
+
+.spice-modal-bg {
+  position:fixed; inset:0; z-index:100;
+  background:rgba(4,10,22,0.92); backdrop-filter:blur(8px);
+  opacity:0; pointer-events:none; transition:opacity 0.35s;
+}
+.spice-modal-bg.open { opacity:1; pointer-events:auto; }
+
+.spice-modal {
+  position:fixed; inset:0; z-index:101;
+  display:flex; align-items:center; justify-content:center;
+  padding:2rem; pointer-events:none; opacity:0;
+  transition:opacity 0.35s; overflow-y:auto;
+}
+.spice-modal.open { opacity:1; pointer-events:auto; }
+
+.spice-modal-inner {
+  background:#0a1628; border:1px solid rgba(168,216,240,0.22);
+  border-radius:4px; overflow:hidden; width:100%; max-width:860px;
+  transform:scale(0.93); transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);
+  position:relative; margin:auto;
+}
+.spice-modal.open .spice-modal-inner { transform:scale(1); }
+
+.spice-modal-close {
+  position:absolute; top:14px; right:14px; z-index:10;
+  width:34px; height:34px; border-radius:50%;
+  background:rgba(7,16,30,0.85); border:1px solid rgba(168,216,240,0.25);
+  color:rgba(255,255,255,0.7); display:flex; align-items:center; justify-content:center;
+  cursor:pointer; font-size:0.9rem; transition:background 0.25s, color 0.25s;
+}
+.spice-modal-close:hover { background:rgba(168,216,240,0.15); color:#fff; }
+
+.spice-modal-img { position:relative; width:100%; height:280px; overflow:hidden; }
+.spice-modal-img img { width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.75); }
+.spice-modal-img-fade {
+  position:absolute; bottom:0; left:0; right:0; height:140px;
+  background:linear-gradient(to bottom, transparent, #0a1628);
+}
+.spice-modal-img-badge {
+  position:absolute; top:14px; left:14px; z-index:3;
+  font-family:'Space Mono',monospace; font-size:0.46rem;
+  letter-spacing:0.18em; text-transform:uppercase; padding:0.28rem 0.75rem;
+  background:rgba(168,216,240,0.18); border:1px solid rgba(168,216,240,0.4);
+  color:var(--sp-blue-pale); backdrop-filter:blur(8px); border-radius:2px;
+}
+
+.spice-modal-body { padding:1.8rem 2.2rem 2.4rem; background:#0a1628; }
+
+.spice-modal-header { display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; margin-bottom:0.6rem; }
+.spice-modal-title { font-family:'Playfair Display',serif; font-size:clamp(1.4rem,2.5vw,2rem); font-weight:700; color:#e8f4ff; line-height:1.2; }
+
+.spice-modal-meta { display:flex; gap:1.4rem; margin-bottom:1.1rem; flex-wrap:wrap; }
+.spice-modal-meta-item {
+  font-family:'Space Mono',monospace; font-size:0.5rem;
+  letter-spacing:0.12em; text-transform:uppercase; color:var(--sp-blue-pale);
+  display:flex; align-items:center; gap:0.4rem;
+}
+
+.spice-modal-desc { font-size:0.88rem; color:rgba(200,230,255,0.8); line-height:1.8; font-weight:300; margin-bottom:1.6rem; }
+
+.spice-modal-divider { height:1px; background:rgba(168,216,240,0.1); margin:1.4rem 0; }
+
+.spice-modal-label {
+  font-family:'Space Mono',monospace; font-size:0.52rem;
+  letter-spacing:0.28em; text-transform:uppercase; color:var(--sp-blue-pale);
+  display:flex; align-items:center; gap:0.8rem; margin-bottom:0.9rem;
+}
+.spice-modal-label::before { content:''; width:16px; height:1px; background:var(--sp-blue); }
+
+.spice-modal-pills { display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.5rem; }
+.spice-modal-pill {
+  font-family:'Space Mono',monospace; font-size:0.46rem; letter-spacing:0.1em;
+  text-transform:uppercase; padding:0.3rem 0.75rem;
+  background:rgba(168,216,240,0.07); border:1px solid rgba(168,216,240,0.22);
+  color:var(--sp-blue-pale); border-radius:2px;
+}
+
+.spice-modal-steps { display:flex; flex-direction:column; gap:1rem; }
+.spice-modal-step { display:flex; gap:1.2rem; align-items:flex-start; }
+.spice-modal-step-num {
+  font-family:'Space Mono',monospace; font-size:0.6rem; font-weight:700;
+  color:var(--sp-blue); opacity:0.6; flex-shrink:0; padding-top:0.15rem; min-width:22px;
+}
+.spice-modal-step-text { font-size:0.88rem; color:rgba(200,230,255,0.85); line-height:1.75; font-weight:300; }
+
+/* =============================================
+   MORE COMING SOON
+   ============================================= */
+
+.spice-more-soon {
+  padding:2rem 4rem 3rem; max-width:1300px; margin:0 auto;
+  display:flex; align-items:center; justify-content:center; gap:3rem;
+}
+.spice-more-line { flex:1; min-width:60px; height:1px; background:linear-gradient(to right, transparent, rgba(168,240,198,0.2), transparent); }
+.spice-more-box {
+  text-align:center; flex-shrink:0;
+  display:inline-flex; flex-direction:column; align-items:center; gap:1.2rem;
+  padding:2.5rem 4rem; border:1px solid rgba(168,240,198,0.15);
+  background:rgba(168,240,198,0.02); position:relative;
+}
+.spice-more-box .tl { position:absolute; top:8px; left:8px; width:14px; height:14px; border-top:1.5px solid rgba(168,240,198,0.5); border-left:1.5px solid rgba(168,240,198,0.5); }
+.spice-more-box .tr { position:absolute; top:8px; right:8px; width:14px; height:14px; border-top:1.5px solid rgba(168,240,198,0.5); border-right:1.5px solid rgba(168,240,198,0.5); }
+.spice-more-box .bl { position:absolute; bottom:8px; left:8px; width:14px; height:14px; border-bottom:1.5px solid rgba(168,240,198,0.5); border-left:1.5px solid rgba(168,240,198,0.5); }
+.spice-more-box .br { position:absolute; bottom:8px; right:8px; width:14px; height:14px; border-bottom:1.5px solid rgba(168,240,198,0.5); border-right:1.5px solid rgba(168,240,198,0.5); }
+.spice-more-dots { display:flex; align-items:center; gap:0.7rem; }
+.spice-more-dot { width:6px; height:6px; border-radius:50%; background:var(--sp-green); box-shadow:0 0 8px var(--sp-green); animation:spicePulse 2.5s infinite; display:inline-block; }
+.spice-more-dot.delay { animation-delay:0.8s; }
+.spice-more-label { font-family:'Space Mono',monospace; font-size:0.55rem; letter-spacing:0.35em; text-transform:uppercase; color:var(--sp-green-pale); }
+.spice-more-text { font-family:'Playfair Display',serif; font-size:clamp(1.1rem,2vw,1.5rem); font-style:italic; color:var(--muted); font-weight:400; line-height:1.5; max-width:340px; }
+.spice-more-sub { font-family:'Space Mono',monospace; font-size:0.5rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--dim); }
+
+/* =============================================
+   ANIMATIONS
+   ============================================= */
+
+@keyframes spiceFadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+@keyframes spiceFadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes spicePulse  { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+@media (max-width:1100px) { .recipe-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:900px) {
+  #spice-hero { padding:6rem 2rem 3rem; }
+  .spice-hero-inner { flex-direction:column; align-items:flex-start; }
+  .spice-hero-right { align-items:flex-start; }
+  #spice-recipes { padding:4rem 2rem 1rem; }
+  .recipe-grid { grid-template-columns:1fr; }
+  .spice-modal-inner { max-width:100%; }
+  .spice-modal-img { height:200px; }
+  .spice-more-soon { padding:2rem; }
+  .spice-more-box { padding:2rem; }
+}
+
+/* =============================================
+   NAVBAR — GREEN OVERRIDES
+   ============================================= */
+
+.nav-links a.active {
+  color: var(--sp-green-pale) !important;
+}
+.nav-links a.active::before {
+  background: var(--sp-green) !important;
+  box-shadow: 0 0 6px var(--sp-green);
+}
+.nav-links a:hover {
+  color: var(--sp-green-pale) !important;
+}
+.nav-cta {
+  border: 1px solid var(--sp-green-pale) !important;
+  color: var(--sp-green-pale) !important;
+}
+.nav-cta:hover {
+  background: var(--sp-green-pale) !important;
+  color: #050e08 !important;
+  border-color: var(--sp-green-pale) !important;
+}
+.nav-logo {
+  color: var(--sp-green-pale) !important;
+}
+.nav-mobile-menu a.active,
+.nav-mobile-menu a:hover {
+  color: var(--sp-green-pale) !important;
+}
+
+/* =============================================
+   FOOTER — GREEN OVERRIDES
+   ============================================= */
+
+footer {
+  background: #040c07 !important;
+}
+.footer-logo {
+  color: var(--sp-green-pale) !important;
+}
+.footer-col-title {
+  color: var(--sp-green-pale) !important;
+}
+.footer-links a:hover::before {
+  color: var(--sp-green) !important;
+}
+.footer-links a:hover {
+  color: var(--text) !important;
+}
+.footer-copyright span {
+  color: var(--sp-green-pale) !important;
+}
+.footer-made span {
+  color: var(--sp-green) !important;
+}
+.social-link:hover {
+  border-color: var(--sp-green) !important;
+  color: var(--sp-green) !important;
+  background: rgba(168,240,198,0.05) !important;
+}
+.contact-value:hover {
+  color: var(--sp-green) !important;
+}
+
+
+/* =============================================
+   MODAL — FINAL CLEAN OVERRIDES
+   ============================================= */
+
+.spice-modal-bg {
+  z-index: 1001 !important;
+  background: rgba(3, 10, 5, 0.78) !important;
+}
+
+.spice-modal {
+  z-index: 1002 !important;
+  padding: 5vh 2rem !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+}
+
+.spice-modal-inner {
+  max-width: 720px !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  margin: auto !important;
+  background: #0a1628 !important;
+  border-color: rgba(168,216,240,0.25) !important;
+}
+
+/* X button — inside the image, top-right, same row as badge */
+.spice-modal-close {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  z-index: 1003 !important;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 4px !important;
+  background: rgba(5, 14, 8, 0.72) !important;
+  border: 1px solid rgba(168,240,198,0.3) !important;
+  color: rgba(241,240,255,0.85) !important;
+  font-size: 0.72rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  backdrop-filter: blur(8px) !important;
+  transition: background 0.2s, color 0.2s, border-color 0.2s !important;
+}
+.spice-modal-close:hover {
+  background: rgba(168,240,198,0.18) !important;
+  border-color: var(--sp-green) !important;
+  color: var(--sp-green-pale) !important;
+}
+
+@media (max-width: 900px) {
+  .spice-modal { padding: 3rem 1rem 2rem !important; }
+}
+
+/* =============================================
+   BLUE ACCENT TOUCHES — subtle, not OA
+   ============================================= */
+
+/* Hero bottom border — blue tint */
+#spice-hero {
+  border-bottom-color: rgba(168,216,240,0.12) !important;
+}
+
+/* Hero glow g1 — slight blue mixed in */
+.spice-hero-glow.g1 {
+  background: radial-gradient(circle, rgba(168,216,240,0.07) 0%, transparent 65%) !important;
+}
+
+/* Eyebrow dot — stays green, but eyebrow text gets blue */
+.spice-eyebrow-text {
+  color: var(--sp-blue-pale) !important;
+}
+
+/* Title accent stroke — mix: keep green but hint of blue via gradient text-stroke trick */
+/* Stat numbers — alternate: keep green on first, blue on middle */
+.spice-stat:nth-child(2) .spice-stat-num {
+  color: var(--sp-blue-pale) !important;
+}
+
+/* Section tag line — blue gradient */
+.spice-section-tag::after {
+  background: linear-gradient(to right, rgba(168,216,240,0.25), transparent) !important;
+}
+
+/* Card hover left bar — green to blue gradient (already set, just make sure) */
+.recipe-card::before {
+  background: linear-gradient(to bottom, var(--sp-green), var(--sp-blue)) !important;
+}
+
+/* Card corners on hover — bottom corners go blue */
+.recipe-card:hover .recipe-corner.bl,
+.recipe-card:hover .recipe-corner.br {
+  border-color: var(--sp-blue) !important;
+}
+
+/* Hover hint border — blue */
+.recipe-hint-text {
+  border-color: rgba(168,216,240,0.35) !important;
+  color: var(--sp-blue-pale) !important;
+}
+
+/* Modal divider — blue */
+.spice-modal-divider {
+  background: rgba(168,216,240,0.12) !important;
+}
+
+/* Modal label line (INGREDIENTS / PROCEDURE) — blue */
+.spice-modal-label {
+  color: var(--sp-blue-pale) !important;
+}
+.spice-modal-label::before {
+  background: var(--sp-blue) !important;
+}
+
+/* Procedure step numbers — blue instead of green */
+.spice-modal-step-num {
+  color: var(--sp-blue) !important;
+}
+
+/* More coming soon dots — alternate green/blue */
+.spice-more-dot.delay {
+  background: var(--sp-blue) !important;
+  box-shadow: 0 0 8px var(--sp-blue) !important;
+}
+
+/* More coming soon lines — blue tint */
+.spice-more-line {
+  background: linear-gradient(to right, transparent, rgba(168,216,240,0.18), transparent) !important;
+}
+
+/* More box corners — blue */
+.spice-more-box .bl,
+.spice-more-box .br {
+  border-color: rgba(168,216,240,0.4) !important;
+}

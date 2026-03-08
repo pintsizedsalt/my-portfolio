@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keyframe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="keyframe.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Logo" class="nav-logo-img"/>
+      REALM <span>/ SAM</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Nexus</a></li>
+      <li><a href="index.html#arsenal">My Arsenal</a></li>
+      <li><a href="schema.html">Schema</a></li>
+      <li><a href="spice.html">Spice</a></li>
+      <li><a href="keyframe.html" class="active">Keyframe</a></li>
+      <li><a href="ethos.html">Ethos</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMenu()">Nexus</a>
+    <a href="index.html#arsenal" onclick="closeMenu()">My Arsenal</a>
+    <a href="schema.html" onclick="closeMenu()">Schema</a>
+    <a href="spice.html" onclick="closeMenu()">Spice</a>
+    <a href="keyframe.html" class="active">Keyframe</a>
+    <a href="ethos.html" onclick="closeMenu()">Ethos</a>
+    <a href="index.html#contact" onclick="closeMenu()">Contact</a>
+  </div>
+
+
+  <!-- ===================== HERO ===================== -->
+  <section id="keyframe-hero">
+    <div class="kf-hero-glow g1"></div>
+    <div class="kf-hero-glow g2"></div>
+    <div class="kf-hero-inner">
+      <div class="kf-hero-left">
+        <div class="kf-eyebrow">
+          <div class="kf-eyebrow-dot"></div>
+          <span class="kf-eyebrow-text">05 / Keyframe</span>
+        </div>
+        <h1 class="kf-title">
+          <span class="kf-title-sub">Every cut tells a story.</span>
+          <span class="kf-title-main">My <span class="kf-title-accent">Keyframe.</span></span>
+        </h1>
+        <p class="kf-desc">A mix of videos I’ve edited and filmed for fun, memories, or school. From vlogs and TikToks to random memes and funny clips, I just really enjoy editing and capturing moments.</p>
+      </div>
+      <div class="kf-hero-right">
+        <div class="kf-stat-row">
+          <div class="kf-stat"><div class="kf-stat-num">∞</div><div class="kf-stat-lbl">Hours Edited</div></div>
+          <div class="kf-stat"><div class="kf-stat-num">100%</div><div class="kf-stat-lbl">Self-taught</div></div>
+          <div class="kf-stat"><div class="kf-stat-num">Raw</div><div class="kf-stat-lbl">Always Real</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== CONTENT ===================== -->
+  <section id="keyframe-content">
+
+    <!-- ===== VLOGS ROW ===== -->
+    <div class="kf-row-wrap">
+      <div class="kf-row-label pink">Vlogs</div>
+      <div class="kf-track-outer">
+        <button class="kf-arrow left" onclick="scrollRow(this, -1)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="kf-arrow right" onclick="scrollRow(this, 1)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <div class="kf-track">
+
+          <div class="kf-card-l" onclick="openModal('Eating Chicken Asado with Chilli Peppers Mukbang','vlog','YouTube · Mukbang','Oh diba 5 years ago Mukbanger na talaga ako. Anyway, I love chilli kaya makikita niyo ako mag mukbang ng sili dito. Soafer sarap talaga :> Sobrang old na nitong vlog ko.','https://www.youtube.com/watch?v=bgdxxTSNk30&t=184s','Watch on YouTube','chickenasado.png')">
+            <div class="kf-thumb">
+              <img src="chickenasado.png" alt="chickenasado"/>
+              <div class="kf-thumb-fade"></div>
+              <div class="kf-lbadge vlog">Vlog</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Eating Chicken Asado with Chilli Peppers Mukbang</div>
+              <div class="kf-card-sub">YouTube · Mukbang</div>
+            </div>
+          </div>
+
+          <div class="kf-card-l" onclick="openModal('Pancit Canton with Soup Mukbang','vlog','YouTube · Mukbang','Since maraming basher ang dish na toh, nagluto ako kasi masarap naman talaga siya, di lang talaga marunong mag-luto yung iba ng Pancit Canton na may sabaw. :P','https://www.youtube.com/watch?v=CsrHpFnFWMo','Watch on YouTube','pancitcanton.png')">
+            <div class="kf-thumb">
+              <img src="pancitcanton.png" alt="Pancit Canton"/>
+              <div class="kf-thumb-fade"></div>
+              <div class="kf-lbadge vlog">Vlog</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Pancit Canton with Soup Mukbang</div>
+              <div class="kf-card-sub">YouTube · Mukbang</div>
+            </div>
+          </div>
+
+          <div class="kf-card-l" onclick="openModal('Paano Mag-mall ng Walang Pera?','vlog','YouTube · Vlog','Eto yung taghirap kami kaso mainit kaya nag mall. May pera naman kami pero super konti kaya puro tingin tingin lang kami diyan, literal na window shopping lang. Daming nangyari btw.','https://www.youtube.com/watch?v=uUjFOR_qXqE&t=367s','Watch on YouTube','walangpera.png')">
+            <div class="kf-thumb">
+              <img src="walangpera.png" alt="Weekend Vlog"/>
+              <div class="kf-thumb-fade"></div>
+              <div class="kf-lbadge vlog">Vlog</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Paano Mag-mall ng Walang Pera?</div>
+              <div class="kf-card-sub">YouTube · Vlog</div>
+            </div>
+          </div>
+
+          <div class="kf-card-l" onclick="openModal('Ginisang Munggo Mukbang','vlog','YouTube · Mukbang','Normal Mukbang jejemon vlog na naman tayo. Ano ba naman kasing hairstyle yan?!','https://www.youtube.com/watch?v=WER_F8Eawp4','Watch on YouTube','munggo.png')">
+            <div class="kf-thumb">
+              <img src="munggo.png" alt="Ginisang Munggo"/>
+              <div class="kf-thumb-fade"></div>
+              <div class="kf-lbadge vlog">Vlog</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Ginisang Munggo Mukbang</div>
+              <div class="kf-card-sub">YouTube · Mukbang</div>
+            </div>
+          </div>
+
+          <div class="kf-card-l" onclick="openModal('APALIT VLOG! (With Zye and Friends)','vlog','YouTube · Vlog','Sobrang saya since nakasama ko sila Zye, Ara, and Mika. Thanksgiving to and of course Birthday ni Zye so I gotta make her happy, todo effort pa ako niyan sa mga gifts kong anim ata or lima HHAHAHA.','https://www.youtube.com/watch?v=rnFzoAWG_sk&t=281s','Watch on YouTube','apalitvlog.jpg')">
+            <div class="kf-thumb">
+              <img src="apalitvlog.jpg" alt="APALIT VLOG!"/>
+              <div class="kf-thumb-fade"></div>
+              <div class="kf-lbadge vlog">Vlog</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">APALIT VLOG! (With Zye and Friends)</div>
+              <div class="kf-card-sub">YouTube · Vlog</div>
+            </div>
+          </div>
+
+          <div class="kf-card-l" onclick="openModal('TRYING BLK 513 (SM Vlog with Siblings)','vlog','YouTube · Vlog','Na para bang favoritism talaga siya sa Llao llao. Charot pero not gonna lie, BLK is really good naman talaga. Marami pang kineme ang nangyari diyan kaya watch niyo nalang hehehe.','https://www.youtube.com/watch?v=1xam-3MbOAE&t=50s','Watch on YouTube','blkvsllaollao.jpg')">
+            <div class="kf-thumb">
+              <img src="blkvsllaollao.jpg" alt="Yogurt Vlog"/>
+              <div class="kf-thumb-fade"></div>
+              <div class="kf-lbadge vlog">Vlog</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">TRYING BLK 513 (SM Vlog with Siblings)</div>
+              <div class="kf-card-sub">YouTube · Vlog</div>
+            </div>
+          </div>
+
+          <div class="kf-card-l" onclick="openModal('Cooking Talong/Eggplant Fritters','vlog','YouTube · Cooking Vlog','Jejemon moments kasi tingnan niyo naman yung hairstyle ko?! Ang bata ko pa niyan. 5 years ago pa iyan and nagluluto me dyan HAHAHAHA.','https://www.youtube.com/watch?v=B8CwbS-APfY&t=99s','Watch on YouTube','talong.jpg')">
+            <div class="kf-thumb">
+              <img src="talong.jpg" alt="Cooking Vlog"/>
+              <div class="kf-thumb-fade"></div>
+              <div class="kf-lbadge vlog">Vlog</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Cooking Talong/Eggplant Fritters</div>
+              <div class="kf-card-sub">YouTube · Cooking Vlog</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ===== TIKTOKS ROW ===== -->
+    <div class="kf-row-wrap">
+      <div class="kf-row-label">Random Edits</div>
+      <div class="kf-track-outer">
+        <button class="kf-arrow left" onclick="scrollRow(this, -1)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="kf-arrow right" onclick="scrollRow(this, 1)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <div class="kf-track">
+
+          <div class="kf-card-l" onclick="openModal('Roblox Multo MV','GDRIVE','GDRIVE','Nung time na toh, sikat yung Multo na song and since eto yung era na naglalaro kami ng roblox and Grow a Garden nila ate at kuya, naisipan ko gumawa ng Multo na Music Video pero Roblox Version AHAHAHA.','https://drive.google.com/file/d/1C1hMRL2sVHcYQFG5i0aMf2qMwN01Lg5g/view?usp=sharing','Watch on Drive','roblox.png')">
+            <div class="kf-thumb">
+              <img src="roblox.png" alt="roblox"/>
+              <div class="kf-thumb-fade"></div>
+              <div class="kf-lbadge tiktok">GDRIVE</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Roblox Multo MV</div>
+              <div class="kf-card-sub">Youtube</div>
+            </div>
+          </div>
+
+          <div class="kf-card-l" onclick="openModal('Filter','tiktok','TikTok · School Activity','Study with me energy but make it slightly unhinged and full of bugs. The kind of night where you fix one thing and break three others.','https://www.tiktok.com/@scenesizedsalt/video/7614813579656629512?_r=1&_t=ZS-94VvUNwkLcm','Watch on TikTok','filter.jpg')">
+            <div class="kf-thumb">
+              <img src="filter.jpg" alt="Filter"/>
+              <div class="kf-thumb-fade"></div>
+              <div class="kf-lbadge film">film</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Filter</div>
+              <div class="kf-card-sub">TikTok · School Activity</div>
+            </div>
+          </div>
+
+          <div class="kf-card-l" onclick="openModal('Wala pa, Sample lang to','fun','TikTok · For Fun','Just me, food, and absolutely no filter. The kind of video I make when I just feel like it. No script, no plan, all vibes.','https://www.tiktok.com/@scenesizedsalt','Watch on TikTok','https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=900&q=80')">
+            <div class="kf-thumb">
+              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Mukbang"/>
+              <div class="kf-thumb-fade"></div>
+              <div class="kf-lbadge fun">For Fun</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Wala pa, Sample lang to</div>
+              <div class="kf-card-sub">TikTok · For Fun</div>
+            </div>
+          </div>
+
+          <div class="kf-card-l" onclick="openModal('Sample Part 2','tiktok','TikTok · Tech','Sharing my dev setup and tools I use as a student dev. Desk, tools, all the things I actually use. People love desk setup content apparently.','https://www.tiktok.com/@scenesizedsalt','Watch on TikTok','https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=80')">
+            <div class="kf-thumb">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80" alt="Dev Setup"/>
+              <div class="kf-thumb-fade"></div>
+              <div class="kf-lbadge tiktok">TikTok</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Sample Part 2</div>
+              <div class="kf-card-sub">TikTok · Tech</div>
+            </div>
+          </div>
+
+          <div class="kf-card-l" onclick="openModal('Sample ngani, kulet yarns?','fun','TikTok · Food','Attempted a trending recipe I saw on FoodTok. Did not go as planned. Did it anyway and it was kind of funny ngl. Worth it.','https://www.tiktok.com/@scenesizedsalt','Watch on TikTok','https://images.unsplash.com/photo-1547592180-85f173990554?w=900&q=80')">
+            <div class="kf-thumb">
+              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="FoodTok"/>
+              <div class="kf-thumb-fade"></div>
+              <div class="kf-lbadge fun">For Fun</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Sample ngani, kulet yarns?</div>
+              <div class="kf-card-sub">TikTok · Food</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ===== PORTRAIT ROW ===== -->
+    <div class="kf-row-wrap">
+      <div class="kf-row-label pink">Tiktoks &amp; Reels</div>
+      <div class="kf-track-outer">
+        <button class="kf-arrow left" onclick="scrollRow(this, -1)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="kf-arrow right" onclick="scrollRow(this, 1)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <div class="kf-track">
+
+          <div class="kf-card-p" onclick="openModal('Short POV Film','tiktok','TikTok','Eto yung may pa giveaway tickets and KDR Wish Kaya naman sumali kami ni kuya and sa awa at tulong ng Dios natanggap kami hihi. Very maiksi lang pero masakit yung kanta ahaha. Worth it yung panonood namin.','https://www.tiktok.com/@scenesizedsalt/video/7473507632670674184','Watch on TikTok','pov.png')">
+            <div class="kf-thumb">
+              <img src="pov.png" alt="Short POV Film"/>
+              <div class="kf-lbadge tiktok">Film</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Short POV Film</div>
+              <div class="kf-card-sub">TikTok</div>
+            </div>
+          </div>
+
+          <div class="kf-card-p" onclick="openModal('Wishdate Endless Vlog','tiktok','Vlog','Dito sa Wishdate concert kami nanalo and sobrang worth it guys ansarap panoorin. Chat niyo ako if want niyo mapanood yung wishdate na yun, nasa youtube yun ih.','https://www.tiktok.com/@scenesizedsalt/video/7474953998940900616','Watch on TikTok','wishdate.png')">
+            <div class="kf-thumb">
+              <img src="wishdate.png" alt="Wishdate Endless Vlog"/>
+              <div class="kf-lbadge tiktok">Vlog</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Wishdate Endless Vlog</div>
+              <div class="kf-card-sub">TikTok</div>
+            </div>
+          </div>
+
+          <div class="kf-card-p" onclick="openModal('The Glass Trend Pt. 1','tiktok','TikTok','Sobrang OA ng Trend na Toh pero eto na yung Part 1','https://www.tiktok.com/@scenesizedsalt/video/7607346964220595464','Watch on TikTok','glass1.png')">
+            <div class="kf-thumb">
+              <img src="glass1.png" alt="The Glass Trend Pt. 1"/>
+              <div class="kf-lbadge tiktok">TikTok</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">The Glass Trend Pt. 1</div>
+              <div class="kf-card-sub">TikTok</div>
+            </div>
+          </div>
+
+          <div class="kf-card-p" onclick="openModal('The Glass Trend Pt. 2','fun','TikTok','Sumikat kasi yung first vid ko kaya gumawa ako ng 2nd part hehe.','https://www.tiktok.com/@scenesizedsalt/video/7607701657291427079','Watch on TikTok','glass2.png')">
+            <div class="kf-thumb">
+              <img src="glass2.png" alt="The Glass Trend Pt. 2"/>
+              <div class="kf-lbadge fun">For Fun</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">The Glass Trend Pt. 2</div>
+              <div class="kf-card-sub">TikTok</div>
+            </div>
+          </div>
+
+          <div class="kf-card-p" onclick="openModal('The Glass Trend Pt. 3','tiktok','TikTok','Dami ko pa kasing naisip na memes kaya gumawa pa ng part 3 HAHAHAH','https://www.tiktok.com/@scenesizedsalt/video/7608808152200498439','Watch on TikTok','glass3.png')">
+            <div class="kf-thumb">
+              <img src="glass3.png" alt="The Glass Trend Pt. 3"/>
+              <div class="kf-lbadge tiktok">TikTok</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">The Glass Trend Pt. 3</div>
+              <div class="kf-card-sub">TikTok</div>
+            </div>
+          </div>
+
+          <div class="kf-card-p" onclick="openModal('Disney Characters as Tiktokers','fun','TikTok','Soafer OA ko na talaga mag tiktok HAHAHHA kaya nababaliw nako, yes po, opo.','https://www.tiktok.com/@scenesizedsalt/video/7608101919428529415','Watch on TikTok','disney.png')">
+            <div class="kf-thumb">
+              <img src="disney.png" alt="Disney Characters as Tiktokers"/>
+              <div class="kf-lbadge fun">For Fun</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Disney Characters as Tiktokers</div>
+              <div class="kf-card-sub">TikTok · Fun</div>
+            </div>
+          </div>
+
+          <div class="kf-card-p" onclick="openModal('Nobody\'s Better Dance Trend (Hoshi Version)','fun','TikTok','First ever na mahirap (for me) na sayaw na natutunan ko. SI HOSHI BA NAMAN NG SVT ANG NAGCHOREO DIBA?!','https://www.tiktok.com/@scenesizedsalt/video/7533158210518207752','Watch on TikTok','dance.png')">
+            <div class="kf-thumb">
+              <img src="dance.png" alt="Nobody's Better Dance Trend (Hoshi Version)"/>
+              <div class="kf-lbadge fun">For Fun</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Nobody's Better Dance Trend (Hoshi Version)</div>
+              <div class="kf-card-sub">TikTok · Fun</div>
+            </div>
+          </div>
+
+          <div class="kf-card-p" onclick="openModal('Playing Multo after Magsampay','fun','TikTok','Parang sira na ulit ako dito kase natatawa lang ako.','https://www.tiktok.com/@scenesizedsalt/video/7486758494700342546','Watch on TikTok','sampay.png')">
+            <div class="kf-thumb">
+              <img src="sampay.png" alt="Playing Multo after Magsampay"/>
+              <div class="kf-lbadge fun">For Fun</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Playing Multo after Magsampay</div>
+              <div class="kf-card-sub">TikTok · Fun</div>
+            </div>
+          </div>
+
+          <div class="kf-card-p" onclick="openModal('My Ate\'s Birthday Short Video','fun','TikTok','Di niya alam na binilhan siya ni kuya ng new phone kase sobrang bagal na ng cellphone niya eh.','https://www.tiktok.com/@scenesizedsalt/video/7525345772255104263','Watch on TikTok','birthday.png')">
+            <div class="kf-thumb">
+              <img src="birthday.png" alt="My Ate's Birthday Short Video"/>
+              <div class="kf-lbadge cute vlog">Cute Vlog</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">My Ate's Birthday Short Video</div>
+              <div class="kf-card-sub">TikTok · Vlog</div>
+            </div>
+          </div>
+
+          <div class="kf-card-p" onclick="openModal('Mema Glowup ShotClock Trend','fun','TikTok','Kunwari nag glow up sha. Syempre Filter User eh.','https://www.tiktok.com/@scenesizedsalt/video/7513519095271279880','Watch on TikTok','glowup.png')">
+            <div class="kf-thumb">
+              <img src="glowup.png" alt="Mema Glowup ShotClock Trend"/>
+              <div class="kf-lbadge fun">Transition</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Mema Glowup ShotClock Trend</div>
+              <div class="kf-card-sub">TikTok · Transition</div>
+            </div>
+          </div>
+
+          <div class="kf-card-p" onclick="openModal('Kakaibabe Trend','tiktok','TikTok','Make-Up Transition lamang po itu :>','https://www.tiktok.com/@scenesizedsalt/video/7605517322530344210','Watch on TikTok','kakaibabe.png')">
+            <div class="kf-thumb">
+              <img src="kakaibabe.png" alt="Kakaibabe Trend"/>
+              <div class="kf-lbadge tiktok">Transition</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Kakaibabe Trend</div>
+              <div class="kf-card-sub">TikTok · Transition</div>
+            </div>
+          </div>
+
+          <div class="kf-card-p" onclick="openModal('24Magic Transition Trend','vlog','TikTok','Pasikat lang talaga ako kase nag ppractice lang me mag-makeup para sa graduation ako nalang mag make-up sa self ko. HUI As if gagraduate?! Loobin, sana. HEHEHE.','https://www.tiktok.com/@scenesizedsalt/video/7612492267504553223','Watch on TikTok','24magic.png')">
+            <div class="kf-thumb">
+              <img src="24magic.png" alt="24Magic Transition Trend"/>
+              <div class="kf-lbadge vlog">Transition</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">24Magic Transition Trend</div>
+              <div class="kf-card-sub">TikTok</div>
+            </div>
+          </div>
+
+          <div class="kf-card-p" onclick="openModal('Ms. ICT Edit','vlog','TikTok','Eto yung nagjoin me ng MS. ICT sa ICT Week namin sa La Verdad Christian College, My old School :( huhu.','https://www.tiktok.com/@scenesizedsalt/video/7504684659872189704','Watch on TikTok','ictweek.png')">
+            <div class="kf-thumb">
+              <img src="ictweek.png" alt="Ms. ICT Edit"/>
+              <div class="kf-lbadge vlog">Edit</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Ms. ICT Edit</div>
+              <div class="kf-card-sub">TikTok</div>
+            </div>
+          </div>
+
+          <div class="kf-card-p" onclick="openModal('Transitioner','vlog','TikTok','Wow Musically Yarn? Anyway, mahilig ako mag transition before kaya andaming kinemerut pero nakakahilo kase Android pa gamit ko dyan nuon hehe. Surri','https://www.tiktok.com/@scenesizedsalt/video/7556892470928231687','Watch on TikTok','transitionerist.png')">
+            <div class="kf-thumb">
+              <img src="transitionerist.png" alt="Transitioner"/>
+              <div class="kf-lbadge vlog">Transition</div>
+            </div>
+            <div class="kf-card-info">
+              <div class="kf-card-title">Transitioner</div>
+              <div class="kf-card-sub">TikTok</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ===================== MORE COMING SOON ===================== -->
+  <div class="kf-more-soon">
+    <div class="kf-more-line"></div>
+    <div class="kf-more-box">
+      <span class="tl"></span><span class="tr"></span>
+      <span class="bl"></span><span class="br"></span>
+      <div class="kf-more-dots">
+        <span class="kf-more-dot"></span>
+        <span class="kf-more-label">More Edits On The Way</span>
+        <span class="kf-more-dot delay"></span>
+      </div>
+      <p class="kf-more-text">More videos are being filmed and edited.<br/>The timeline is filling up.</p>
+      <div class="kf-more-sub">&mdash;&nbsp; still rolling &nbsp;&mdash;</div>
+    </div>
+    <div class="kf-more-line"></div>
+  </div>
+
+
+  <!-- ===================== MODAL ===================== -->
+  <div class="kf-modal-bg" id="modalBg" onclick="closeModal()"></div>
+  <div class="kf-modal" id="modal">
+    <div class="kf-modal-inner">
+      <button class="kf-modal-close" onclick="closeModal()">&#x2715;</button>
+      <div class="kf-modal-img">
+        <img id="modalImg" src="" alt=""/>
+        <div class="kf-modal-img-fade"></div>
+        <div class="kf-modal-badge" id="modalBadge"></div>
+      </div>
+      <div class="kf-modal-body">
+        <h2 class="kf-modal-title" id="modalTitle"></h2>
+        <div class="kf-modal-meta">
+          <div class="kf-modal-meta-item" id="modalMeta">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span></span>
+          </div>
+        </div>
+        <p class="kf-modal-desc" id="modalDesc"></p>
+        <a class="kf-play-btn" id="modalBtn" href="#" target="_blank" rel="noopener noreferrer">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span id="modalBtnText">Watch</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">REALM <span>/ SAM</span></a>
+        <p class="footer-tagline">"A space built from code, passion, and a little bit of spice."</p>
+        <div class="footer-socials">
+          <a href="mailto:samlisingisaac28@gmail.com" class="social-link" title="Email">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://github.com/pintsizedsalt" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/scenesizedsalt" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@scenesizedsalt" target="_blank" rel="noopener noreferrer" class="social-link" title="TikTok">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Nexus — Home</a></li>
+          <li><a href="index.html#arsenal">My Arsenal</a></li>
+          <li><a href="schema.html">Schema</a></li>
+          <li><a href="spice.html">Spice</a></li>
+          <li><a href="keyframe.html">Keyframe</a></li>
+          <li><a href="ethos.html">Ethos</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Sections</div>
+        <ul class="footer-links">
+          <li><a href="index.html#arsenal">Profile</a></li>
+          <li><a href="schema.html">Projects</a></li>
+          <li><a href="spice.html">Recipes</a></li>
+          <li><a href="keyframe.html">Content</a></li>
+          <li><a href="ethos.html">Faith & Values</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:samlisingisaac28@gmail.com" class="contact-value">samlisingisaac28@gmail.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="contact-label">Based In</span>
+          <span class="contact-value">Philippines 🇵🇭</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="contact-label">Open For</span>
+          <span class="contact-value">Projects & Collabs</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 <span>Realm by Sam</span>. All rights reserved.</p>
+      <p class="footer-made">Designed & built by <span>Sam</span> with love.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    // NAV
+    function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+    function closeMenu()  { document.getElementById('mobileMenu').classList.remove('open'); }
+
+    // SCROLL ARROWS
+    function scrollRow(btn, dir) {
+      const track = btn.closest('.kf-track-outer').querySelector('.kf-track');
+      track.scrollBy({ left: dir * 320, behavior: 'smooth' });
+    }
+
+    // MODAL
+    function openModal(title, badge, meta, desc, link, btnText, img) {
+      document.getElementById('modalTitle').textContent    = title;
+      document.getElementById('modalDesc').textContent     = desc;
+      document.getElementById('modalBtnText').textContent  = btnText;
+      document.getElementById('modalBtn').href             = link;
+      document.getElementById('modalImg').src              = img;
+      document.getElementById('modalImg').alt              = title;
+
+      const badgeEl = document.getElementById('modalBadge');
+      badgeEl.textContent = badge.charAt(0).toUpperCase() + badge.slice(1);
+      badgeEl.className   = 'kf-modal-badge ' + badge;
+
+      document.getElementById('modalMeta').querySelector('span').textContent = meta;
+
+      document.getElementById('modalBg').classList.add('open');
+      document.getElementById('modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modalBg').classList.remove('open');
+      document.getElementById('modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // close on Escape key
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Schema</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="schema.css"/>
+  <style>
+    /* placeholder — styles moved to schema.css */
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Logo" class="nav-logo-img" />
+      REALM <span>/ SAM</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Nexus</a></li>
+      <li><a href="index.html#arsenal">My Arsenal</a></li>
+      <li><a href="schema.html" class="active">Schema</a></li>
+      <li><a href="spice.html">Spice</a></li>
+      <li><a href="keyframe.html">Keyframe</a></li>
+      <li><a href="ethos.html">Ethos</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMenu()">Nexus</a>
+    <a href="index.html#arsenal" onclick="closeMenu()">My Arsenal</a>
+    <a href="schema.html">Schema</a>
+    <a href="spice.html">Spice</a>
+    <a href="keyframe.html">Keyframe</a>
+    <a href="ethos.html">Ethos</a>
+    <a href="index.html#contact" onclick="closeMenu()">Contact</a>
+  </div>
+
+
+  <!-- ===================== HERO ===================== -->
+  <section id="schema-hero">
+    <div class="schema-hero-glow g1"></div>
+    <div class="schema-hero-glow g2"></div>
+
+    <div class="schema-hero-inner">
+      <div class="schema-hero-left">
+        <div class="schema-eyebrow">
+          <div class="schema-eyebrow-dot"></div>
+          <span class="schema-eyebrow-text">03 / Schema</span>
+        </div>
+        <h1 class="schema-title">
+          <span class="schema-title-sub">Where the code lives.</span>
+          <span class="schema-title-main">My <span class="schema-title-accent">Schema.</span></span>
+        </h1>
+        <p class="schema-desc">
+          My coding journey — the languages I code in, the projects I built from scratch, and the skills I’ve learned along the way. AI sometimes helps, pero mostly, I learn and figure things out myself.
+        </p>
+      </div>
+
+      <div class="schema-hero-right">
+        <div class="schema-stat-row">
+          <div class="schema-stat">
+            <div class="schema-stat-num">9</div>
+            <div class="schema-stat-lbl">Languages</div>
+          </div>
+          <div class="schema-stat">
+            <div class="schema-stat-num">3+</div>
+            <div class="schema-stat-lbl">Years Coding</div>
+          </div>
+          <div class="schema-stat">
+            <div class="schema-stat-num">5+</div>
+            <div class="schema-stat-lbl">Projects</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== SKILLS ===================== -->
+  <section id="schema-skills">
+    <div class="schema-section-tag">Tech Stack</div>
+
+    <div class="skills-grid">
+
+      <!-- HTML -->
+      <div class="skill-card">
+        <div class="skill-scan"></div>
+        <div class="skill-card-inner">
+          <div class="skill-card-top">
+            <div class="skill-logo">
+              <svg viewBox="0 0 128 128" width="26" height="26"><path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"/><path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"/><path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.337 3.752 3.448 38.68H64zm0 36.434l-.062.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"/><path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/></svg>
+            </div>
+            <div>
+              <div class="skill-name">HTML</div>
+              <div class="skill-type">Markup Language</div>
+            </div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top">
+              <span class="skill-bar-label">Proficiency</span>
+              <span class="skill-bar-pct">97%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="97"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CSS -->
+      <div class="skill-card">
+        <div class="skill-scan"></div>
+        <div class="skill-card-inner">
+          <div class="skill-card-top">
+            <div class="skill-logo">
+              <svg viewBox="0 0 128 128" width="26" height="26"><path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"/><path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354H64.001v106.49z"/><path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"/><path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"/><path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.46 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"/><path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.044-.331-3.679h34.646zm-.047 27.994v13.831H45.666l-.277-3.108-.631-7.044-.33-3.679h19.573z"/></svg>
+            </div>
+            <div>
+              <div class="skill-name">CSS</div>
+              <div class="skill-type">Styling Language</div>
+            </div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top">
+              <span class="skill-bar-label">Proficiency</span>
+              <span class="skill-bar-pct">90%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="90"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="skill-card">
+        <div class="skill-scan"></div>
+        <div class="skill-card-inner">
+          <div class="skill-card-top">
+            <div class="skill-logo">
+              <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="256" height="256" rx="60" fill="#F0DB4F"/>
+              <path d="M67.3117 213.932L86.9027 202.076C90.6821 208.777 94.1202 214.447 102.367 214.447C110.272 214.447 115.256 211.355 115.256 199.327V117.529H139.314V199.667C139.314 224.584 124.708 235.926 103.398 235.926C84.1533 235.926 72.9819 225.959 67.3113 213.93" fill="#323330"/>
+              <path d="M152.381 211.354L171.969 200.013C177.126 208.434 183.828 214.62 195.684 214.62C205.653 214.62 212.009 209.636 212.009 202.762C212.009 194.514 205.479 191.592 194.481 186.782L188.468 184.203C171.111 176.815 159.597 167.535 159.597 147.945C159.597 129.901 173.345 116.153 194.826 116.153C210.12 116.153 221.118 121.481 229.022 135.4L210.291 147.429C206.166 140.04 201.7 137.119 194.826 137.119C187.78 137.119 183.312 141.587 183.312 147.429C183.312 154.646 187.78 157.568 198.09 162.037L204.104 164.614C224.553 173.379 236.067 182.313 236.067 202.418C236.067 224.072 219.055 235.928 196.2 235.928C173.861 235.928 159.426 225.274 152.381 211.354" fill="#323330"/>
+              </svg>
+            </div>
+            <div>
+              <div class="skill-name">JavaScript</div>
+              <div class="skill-type">Scripting Language</div>
+            </div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top">
+              <span class="skill-bar-label">Proficiency</span>
+              <span class="skill-bar-pct">20%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="20"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHP -->
+      <div class="skill-card">
+        <div class="skill-scan"></div>
+        <div class="skill-card-inner">
+          <div class="skill-card-top">
+            <div class="skill-logo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" fill="none" viewBox="0 0 256 256"><rect width="256" height="256" fill="#242938" rx="60"/><path fill="#fff" d="M49.158 100.246H77.566C85.904 100.316 91.946 102.72 95.692 107.454C99.438 112.188 100.674 118.654 99.402 126.852C98.908 130.598 97.812 134.272 96.116 137.876C94.49 141.48 92.23 144.73 89.332 147.628C85.798 151.302 82.018 153.634 77.99 154.624C73.962 155.614 69.792 156.108 65.482 156.108H52.762L48.734 176.248H34L49.158 100.246V100.246ZM61.56 112.33L55.2 144.13C55.624 144.2 56.048 144.236 56.472 144.236C56.966 144.236 57.462 144.236 57.956 144.236C64.74 144.306 70.394 143.636 74.916 142.222C79.438 140.738 82.478 135.58 84.032 126.746C85.304 119.326 84.032 115.05 80.216 113.92C76.47 112.79 71.772 112.26 66.118 112.33C65.27 112.4 64.458 112.436 63.68 112.436C62.974 112.436 62.232 112.436 61.454 112.436L61.56 112.33"/><path fill="#fff" d="M116.186 80H130.814L126.68 100.246H139.824C147.032 100.388 152.402 101.872 155.936 104.698C159.54 107.524 160.6 112.896 159.116 120.81L152.014 156.108H137.174L143.958 122.4C144.664 118.866 144.452 116.358 143.322 114.874C142.192 113.39 139.754 112.648 136.008 112.648L124.242 112.542L115.55 156.108H100.922L116.186 80Z"/><path fill="#fff" d="M174.824 100.246H203.232C211.57 100.316 217.612 102.72 221.358 107.454C225.104 112.188 226.34 118.654 225.068 126.852C224.574 130.598 223.478 134.272 221.782 137.876C220.156 141.48 217.896 144.73 214.998 147.628C211.464 151.302 207.684 153.634 203.656 154.624C199.628 155.614 195.458 156.108 191.148 156.108H178.428L174.4 176.248H159.666L174.824 100.246V100.246ZM187.226 112.33L180.866 144.13C181.29 144.2 181.714 144.236 182.138 144.236C182.632 144.236 183.128 144.236 183.622 144.236C190.406 144.306 196.06 143.636 200.582 142.222C205.104 140.738 208.144 135.58 209.698 126.746C210.97 119.326 209.698 115.05 205.882 113.92C202.136 112.79 197.438 112.26 191.784 112.33C190.936 112.4 190.124 112.436 189.346 112.436C188.64 112.436 187.898 112.436 187.12 112.436L187.226 112.33"/></svg>
+            </div>
+            <div>
+              <div class="skill-name">PHP</div>
+              <div class="skill-type">Backend Language</div>
+            </div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top">
+              <span class="skill-bar-label">Proficiency</span>
+              <span class="skill-bar-pct">30%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="30"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Laravel -->
+      <div class="skill-card">
+        <div class="skill-scan"></div>
+        <div class="skill-card-inner">
+          <div class="skill-card-top">
+            <div class="skill-logo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" fill="none" viewBox="0 0 256 256"><rect width="256" height="256" fill="#242938" rx="60"/><path fill="#FF2D20" fill-rule="evenodd" d="M215.846 78.3138C215.91 78.5572 215.944 78.8083 215.944 79.0605V118.26C215.944 118.763 215.813 119.257 215.565 119.692C215.316 120.128 214.958 120.489 214.528 120.739L182.082 139.681V177.226C182.082 178.248 181.547 179.191 180.673 179.706L112.945 219.241C112.79 219.33 112.621 219.387 112.452 219.448C112.388 219.47 112.329 219.509 112.262 219.527C111.788 219.653 111.291 219.653 110.817 219.527C110.74 219.505 110.669 219.462 110.595 219.434C110.44 219.377 110.278 219.327 110.13 219.241L42.4164 179.706C41.9862 179.455 41.6288 179.094 41.3801 178.659C41.1314 178.224 41.0003 177.729 41 177.226V59.6288C41 59.3715 41.0352 59.1214 41.0986 58.8785C41.1198 58.7963 41.1691 58.7213 41.1973 58.6391C41.2501 58.4891 41.2995 58.3355 41.377 58.1961C41.4298 58.1032 41.5073 58.0282 41.5708 57.9425C41.6518 57.8281 41.7258 57.7102 41.8209 57.6102C41.9019 57.528 42.0076 57.4673 42.0993 57.3959C42.2014 57.3101 42.293 57.2172 42.4093 57.1493H42.4128L76.2714 37.3818C76.7001 37.1317 77.1861 37 77.6807 37C78.1753 37 78.6613 37.1317 79.09 37.3818L112.949 57.1493H112.956C113.068 57.2208 113.164 57.3101 113.266 57.3923C113.357 57.4637 113.459 57.528 113.54 57.6066C113.639 57.7102 113.71 57.8281 113.794 57.9425C113.854 58.0282 113.935 58.1032 113.984 58.1961C114.065 58.339 114.111 58.4891 114.168 58.6391C114.196 58.7213 114.245 58.7963 114.266 58.8821C114.331 59.1255 114.364 59.3766 114.365 59.6288V133.079L142.579 116.606V79.0569C142.579 78.8068 142.614 78.5531 142.678 78.3138C142.703 78.228 142.748 78.153 142.777 78.0708C142.833 77.9208 142.882 77.7672 142.96 77.6278C143.013 77.5349 143.09 77.4599 143.15 77.3742C143.235 77.2598 143.305 77.1419 143.404 77.0419C143.485 76.9597 143.587 76.899 143.679 76.8275C143.784 76.7418 143.876 76.6489 143.989 76.581H143.993L177.855 56.8135C178.283 56.563 178.769 56.4311 179.264 56.4311C179.759 56.4311 180.245 56.563 180.673 56.8135L214.532 76.581C214.652 76.6525 214.743 76.7418 214.849 76.824C214.937 76.8954 215.039 76.9597 215.12 77.0383C215.219 77.1419 215.289 77.2598 215.374 77.3742C215.437 77.4599 215.515 77.5349 215.564 77.6278C215.645 77.7672 215.691 77.9208 215.747 78.0708C215.779 78.153 215.825 78.228 215.846 78.3138H215.846ZM210.3 116.606V84.0086L198.451 90.9253L182.082 100.482V133.079L210.303 116.606H210.3ZM176.441 175.572V142.954L160.34 152.279L114.361 178.888V211.813L176.441 175.572ZM46.6443 64.5769V175.572L108.717 211.81V178.891L76.289 160.281L76.2784 160.274L76.2643 160.267C76.1551 160.203 76.0635 160.11 75.9613 160.031C75.8732 159.96 75.7711 159.903 75.6936 159.824L75.6866 159.814C75.595 159.724 75.5315 159.614 75.454 159.513C75.3835 159.417 75.299 159.335 75.2426 159.235L75.2386 159.224C75.1752 159.117 75.1364 158.988 75.0906 158.867C75.0448 158.76 74.9849 158.66 74.9568 158.545V158.541C74.9216 158.406 74.9145 158.263 74.9004 158.123C74.8863 158.016 74.8581 157.909 74.8581 157.802V157.795V81.0505L58.493 71.49L46.6443 64.5805V64.5769ZM77.6842 43.1624L49.4735 59.6288L77.6772 76.0951L105.884 59.6252L77.6772 43.1624H77.6842ZM92.3551 145.926L108.721 136.373V64.5769L96.8719 71.4936L80.5029 81.0504V152.847L92.3551 145.926ZM179.264 62.5941L151.056 79.0605L179.264 95.5268L207.467 79.0569L179.264 62.5941ZM176.441 100.482L160.072 90.9253L148.224 84.0086V116.606L164.589 126.159L176.441 133.079V100.482ZM111.536 173.94L152.909 149.988L173.591 138.02L145.405 121.564L112.952 140.51L83.3743 157.777L111.536 173.94Z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <div class="skill-name">Laravel</div>
+              <div class="skill-type">PHP Framework</div>
+            </div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top">
+              <span class="skill-bar-label">Proficiency</span>
+              <span class="skill-bar-pct">98%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="98"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Python -->
+      <div class="skill-card">
+        <div class="skill-scan"></div>
+        <div class="skill-card-inner">
+          <div class="skill-card-top">
+            <div class="skill-logo">
+              <svg viewBox="0 0 128 128" width="26" height="26"><linearGradient id="python-a" x1="70.252" x2="170.659" y1="1237.476" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/></linearGradient><linearGradient id="python-b" x1="209.474" x2="173.62" y1="1098.811" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/></linearGradient><path fill="url(#python-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zm-13.354 7.569c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z"/><path fill="url(#python-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.548v23.515c0 6.693 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z"/></svg>
+            </div>
+            <div>
+              <div class="skill-name">Python</div>
+              <div class="skill-type">General Purpose</div>
+            </div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top">
+              <span class="skill-bar-label">Proficiency</span>
+              <span class="skill-bar-pct">70%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="70"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MySQL -->
+      <div class="skill-card">
+        <div class="skill-scan"></div>
+        <div class="skill-card-inner">
+          <div class="skill-card-top">
+            <div class="skill-logo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" fill="none" viewBox="0 0 256 256"><rect width="256" height="256" fill="#242938" rx="60"/><g clip-path="url(#clip0_7_147)"><path fill="#fff" fill-rule="evenodd" d="M203.801 178.21C194.011 177.938 186.416 178.941 180.051 181.619C178.218 182.355 175.277 182.355 175.035 184.662C176.015 185.63 176.133 187.214 176.992 188.556C178.459 190.991 181.033 194.271 183.357 195.973L191.191 201.571C195.965 204.488 201.351 206.193 206.002 209.113C208.696 210.817 211.388 213.007 214.082 214.834C215.454 215.807 216.285 217.392 218 217.997V217.629C217.144 216.538 216.897 214.957 216.044 213.735L212.367 210.209C208.82 205.465 204.41 201.325 199.636 197.922C195.718 195.245 187.152 191.596 185.56 187.097L185.319 186.824C188.008 186.552 191.191 185.605 193.764 184.875C197.929 183.784 201.721 184.024 206.002 182.93L211.882 181.226V180.135C209.678 177.946 208.087 175.025 205.763 172.959C199.521 167.606 192.661 162.373 185.56 157.994C181.766 155.562 176.868 153.977 172.829 151.913C171.356 151.182 168.911 150.817 168.055 149.601C165.846 146.929 164.625 143.397 163.034 140.232L152.997 119.064C150.794 114.319 149.444 109.574 146.755 105.195C134.144 84.5124 120.431 71.9828 99.375 59.6932C94.8477 57.1382 89.4616 56.0393 83.7353 54.7032L74.5546 54.2124C72.5928 53.3616 70.6364 51.0493 68.9216 49.9531C61.9441 45.5739 43.9475 36.0847 38.8029 48.5897C35.4966 56.4974 43.7006 64.2824 46.4855 68.299C48.5708 71.0966 51.2597 74.2597 52.7332 77.4228C53.5563 79.4897 53.8307 81.682 54.6895 83.8717C56.6458 89.2243 58.4842 95.1878 61.0551 100.178C62.427 102.733 63.8675 105.413 65.5824 107.723C66.5619 109.086 68.2768 109.67 68.6417 111.859C66.9268 114.294 66.8089 117.94 65.8293 120.986C61.42 134.734 63.1349 151.766 69.377 161.888C71.3389 164.928 75.9622 171.622 82.2345 169.065C87.744 166.875 86.5148 159.941 88.1062 153.857C88.4766 152.399 88.2297 151.425 88.9623 150.449V150.722L93.9834 160.819C97.7781 166.78 104.391 172.986 109.897 177.125C112.833 179.315 115.16 183.089 118.831 184.425V184.057H118.59C117.854 182.966 116.751 182.475 115.772 181.624C113.569 179.435 111.121 176.757 109.406 174.325C104.267 167.513 99.7399 159.968 95.6983 152.183C93.7365 148.412 92.0216 144.275 90.4357 140.504C89.6949 139.043 89.6949 136.85 88.4739 136.125C86.6355 138.797 83.9466 141.115 82.5939 144.398C80.2672 149.628 80.0257 156.077 79.1697 162.769C78.6758 162.891 78.8953 162.769 78.6758 163.041C74.7631 162.071 73.4132 158.051 71.9453 154.648C68.274 146.01 67.6594 132.141 70.8422 122.164C71.6983 119.609 75.375 111.579 73.9071 109.146C73.1662 106.834 70.7242 105.498 69.3743 103.671C67.7829 101.359 66.0735 98.4409 64.9705 95.8859C62.0346 89.0689 60.5667 81.5293 57.3812 74.7151C55.9077 71.552 53.3396 68.2662 51.257 65.3486C48.9303 62.0628 46.3648 59.7505 44.5265 55.8593C43.9146 54.4959 43.0585 52.3309 44.0381 50.8693C44.2795 49.8959 44.7734 49.5059 45.7475 49.2878C47.3389 47.9244 51.8716 49.6532 53.463 50.3785C57.9903 52.2054 61.7849 53.907 65.5796 56.4592C67.2945 57.6754 69.1329 59.9877 71.3361 60.5985H73.9098C77.8279 61.4493 82.2317 60.8712 85.9002 61.9619C92.3893 64.0343 98.2637 67.0719 103.532 70.3604C119.567 80.4577 132.792 94.8143 141.725 111.971C143.193 114.769 143.805 117.324 145.155 120.244C147.729 126.208 150.912 132.289 153.477 138.132C156.051 143.85 158.498 149.694 162.17 154.438C164.008 156.993 171.35 158.329 174.654 159.668C177.104 160.759 180.896 161.741 183.105 163.077C187.264 165.632 191.427 168.552 195.342 171.35C197.298 172.806 203.423 175.849 203.787 178.276L203.801 178.21ZM78.9584 72.4873C77.267 72.4724 75.5809 72.6769 73.9427 73.0954V73.3681H74.1842C75.1637 75.315 76.8786 76.6538 78.1023 78.3581L80.9202 84.1989L81.1616 83.9262C82.8765 82.71 83.7353 80.7631 83.7353 77.8454C83 76.9947 82.8793 76.1412 82.2674 75.2904C81.5321 74.0743 79.9407 73.4635 78.9584 72.4928V72.4873Z" clip-rule="evenodd"/></g><defs><clipPath id="clip0_7_147"><rect width="180" height="180" fill="#fff" transform="translate(38 38)"/></clipPath></defs></svg>
+            </div>
+            <div>
+              <div class="skill-name">MySQL</div>
+              <div class="skill-type">Database</div>
+            </div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top">
+              <span class="skill-bar-label">Proficiency</span>
+              <span class="skill-bar-pct">78%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="78"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tailwind -->
+      <div class="skill-card">
+        <div class="skill-scan"></div>
+        <div class="skill-card-inner">
+          <div class="skill-card-top">
+            <div class="skill-logo">
+              <svg viewBox="0 0 128 128" width="26" height="26"><path d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.745-12.207-8.66C55.128 71.371 47.868 64 32.004 64z" fill="#38BDF8"/></svg>
+            </div>
+            <div>
+              <div class="skill-name">Tailwind CSS</div>
+              <div class="skill-type">CSS Framework</div>
+            </div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top">
+              <span class="skill-bar-label">Proficiency</span>
+              <span class="skill-bar-pct">67%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="67"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- C# -->
+      <div class="skill-card">
+        <div class="skill-scan"></div>
+        <div class="skill-card-inner">
+          <div class="skill-card-top">
+            <div class="skill-logo">
+              <svg viewBox="0 0 128 128" width="26" height="26"><path fill="#9B4F96" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"/><path fill="#68217A" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"/><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6zM97 66.2l.9-4.3h-4.2v-4.7h5.1L100 51h4.9l-1.2 6.1h3.8l1.2-6.1h4.8l-1.2 6.1h2.4v4.7h-3.3l-.9 4.3h4.2v4.7h-5.1l-1.2 6h-4.9l1.2-6h-3.8l-1.2 6h-4.8l1.2-6h-2.4v-4.7H97zm4.8 0h3.8l.9-4.3h-3.8l-.9 4.3z"/></svg>
+            </div>
+            <div>
+              <div class="skill-name">C#</div>
+              <div class="skill-type">OOP Language</div>
+            </div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top">
+              <span class="skill-bar-label">Proficiency</span>
+              <span class="skill-bar-pct">55%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="55"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="schema-projects">
+    <div class="schema-section-tag">Project Compilation</div>
+    <p class="project-disclaimer">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      Most "View Live" links lead to converted HTML/CSS/JS versions — the original projects were built in PHP & Laravel which require a local server to run. Want to see the real thing? Just reach out. 🙂
+    </p>
+
+    <div class="projects-list">
+
+      <!-- PROJECT 1 — text left, video right -->
+      <div class="project-item">
+        <div class="project-text">
+          <div class="project-tag">Practical Exam · Web Dev</div>
+          <h2 class="project-title">Transaction App</h2>
+          <p class="project-desc">
+            Ito 'yung isa sa mga pinaka-unang ginawa ko, kaya wag mo na asahang maganda ang UI nito haha. Walang CSS styling, halos plain lang lahat. Pero ang importante, gumagana siya. Practical exam siya, so priority was functionality, hindi aesthetics.
+          </p>
+          <div class="project-stack">
+            <span class="project-tag-pill">PHP</span>
+            <span class="project-tag-pill">Laravel</span>
+            <span class="project-tag-pill">Blade</span>
+            <span class="project-tag-pill">HTML</span>
+          </div>
+          <a href="https://pintsizedsalt.github.io/first-transaction-app/" target="_blank" rel="noopener noreferrer" class="project-link">
+            View Live
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <div class="project-media">
+          <div class="project-media-corner tl"></div>
+          <div class="project-media-corner tr"></div>
+          <div class="project-media-corner bl"></div>
+          <div class="project-media-corner br"></div>
+          <img
+            src="transactionapp.png"
+            alt="Transaction Preview"
+            class="project-video"
+            style="object-fit:cover;width:100%;height:100%;"
+          />
+        </div>
+      </div>
+
+      <!-- PROJECT 2 — video left, text right (reverse) -->
+      <div class="project-item reverse">
+        <div class="project-text">
+          <div class="project-tag">School Activity · Web Dev</div>
+          <h2 class="project-title">Profile App</h2>
+          <p class="project-desc">
+            Activity lang to pero ginawa ko naman ng maayos. Basic profile viewer where you can see a list of profiles with their names, emails, at short bio. Simple lang ang concept pero dito nagsisimula ang lahat, first mo matututunan ang CRUD basics.
+          </p>
+          <div class="project-stack">
+            <span class="project-tag-pill">PHP</span>
+            <span class="project-tag-pill">Laravel</span>
+            <span class="project-tag-pill">Blade</span>
+            <span class="project-tag-pill">HTML</span>
+            <span class="project-tag-pill">CSS</span>
+          </div>
+          <a href="https://pintsizedsalt.github.io/profile-app-2/" target="_blank" rel="noopener noreferrer" class="project-link">
+            View Live
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <div class="project-media">
+          <div class="project-media-corner tl"></div>
+          <div class="project-media-corner tr"></div>
+          <div class="project-media-corner bl"></div>
+          <div class="project-media-corner br"></div>
+          <img
+            src="profileapp.png"
+            alt="Profile App Preview"
+            class="project-video"
+            style="object-fit:cover;width:100%;height:100%;"
+          />
+        </div>
+      </div>
+
+      <!-- PROJECT 3 — text left, video right -->
+      <div class="project-item">
+        <div class="project-text">
+          <div class="project-tag">Final School Project · Web Dev</div>
+          <h2 class="project-title">Datadump - Note App</h2>
+          <p class="project-desc">
+            Ito na may konting glow-up na. Note-taking app na may search, timestamps, and card layout. Dito mo na makikita na nag-iimprove na ako, may design na kahit konti. Final project ko ito nung 1st sem ng 2nd year ko sa La Verdad Christian College.
+          </p>
+          <div class="project-stack">
+            <span class="project-tag-pill">PHP</span>
+            <span class="project-tag-pill">Laravel</span>
+            <span class="project-tag-pill">Blade</span>
+            <span class="project-tag-pill">HTML</span>
+            <span class="project-tag-pill">CSS</span>
+            <span class="project-tag-pill">JavaScript</span>
+            <span class="project-tag-pill">Tailwind CSS</span>
+          </div>
+          <a href="https://pintsizedsalt.github.io/note-app/" target="_blank" rel="noopener noreferrer" class="project-link">
+            View Live
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <div class="project-media">
+          <div class="project-media-corner tl"></div>
+          <div class="project-media-corner tr"></div>
+          <div class="project-media-corner bl"></div>
+          <div class="project-media-corner br"></div>
+          <img
+            src="noteapp.png"
+            alt="Note App Preview"
+            class="project-video"
+            style="object-fit:cover;width:100%;height:100%;"
+          />
+        </div>
+      </div>
+
+            <!-- PROJECT 4 — reverse -->
+      <div class="project-item reverse">
+        <div class="project-text">
+          <div class="project-tag">School Recitation · Web Dev</div>
+          <h2 class="project-title">Quiz App</h2>
+          <p class="project-desc">
+            Ginawa ko 'to para sa recitation namin, isang Haikyuu-themed quiz app na may actual quiz functionality. Medyo nag-go off ako dito kasi may design pa, may pages pa, may theme pa haha. Problema lang, sobrang bongga para sa requirement na dapat simple lang daw. Kaya ayon, hindi ko na 'to napresent.
+          </p>
+          <div class="project-stack">
+            <span class="project-tag-pill">PHP</span>
+            <span class="project-tag-pill">Laravel</span>
+            <span class="project-tag-pill">Blade</span>
+            <span class="project-tag-pill">HTML</span>
+            <span class="project-tag-pill">CSS</span>
+            <span class="project-tag-pill">JS</span>
+          </div>
+          <a href="https://pintsizedsalt.github.io/haikyuu-quiz-html/" target="_blank" rel="noopener noreferrer" class="project-link">
+            View Live
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <div class="project-media">
+          <div class="project-media-corner tl"></div>
+          <div class="project-media-corner tr"></div>
+          <div class="project-media-corner bl"></div>
+          <div class="project-media-corner br"></div>
+          <img
+            src="haikyuuquiz.png"
+            alt="Quiz App Preview"
+            class="project-video"
+            style="object-fit:cover;width:100%;height:100%;"
+          />
+        </div>
+      </div>
+
+            <!-- PROJECT 5 — normal -->
+      <div class="project-item">
+        <div class="project-text">
+          <div class="project-tag">Final Project · UI Design</div>
+          <h2 class="project-title">Realm — My Portfolio</h2>
+          <p class="project-desc">
+            Ito na 'yung pinaka-maganda sa lahat. Full portfolio site na hand-coded ko from scratch, charot syempre may help ng AI, tapos dark cosmic aesthetic, per-page color theming, smooth animations.
+          </p>
+          <div class="project-stack">
+            <span class="project-tag-pill">HTML</span>
+            <span class="project-tag-pill">CSS</span>
+            <span class="project-tag-pill">JS</span>
+          </div>
+          <p class="project-link" style="cursor:default; opacity:0.45; pointer-events:none;">
+            You're looking at it!
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </p>
+        </div>
+        <div class="project-media">
+          <div class="project-media-corner tl"></div>
+          <div class="project-media-corner tr"></div>
+          <div class="project-media-corner bl"></div>
+          <div class="project-media-corner br"></div>
+          <img
+            src="portfolioapp.png"
+            alt="Realm Portfolio Preview"
+            class="project-video"
+            style="object-fit:cover;width:100%;height:100%;"
+          />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== MORE COMING SOON ===================== -->
+  <div class="schema-more-soon">
+    <div class="schema-more-line"></div>
+    <div class="schema-more-box">
+      <span class="tl"></span>
+      <span class="tr"></span>
+      <span class="bl"></span>
+      <span class="br"></span>
+      <div class="schema-more-dots">
+        <span class="schema-more-dot"></span>
+        <span class="schema-more-label">More In Progress</span>
+        <span class="schema-more-dot delay"></span>
+      </div>
+      <p class="schema-more-text">New projects are being built.<br/>Check back soon.</p>
+      <div class="schema-more-sub">&mdash;&nbsp; still cooking &nbsp;&mdash;</div>
+    </div>
+    <div class="schema-more-line"></div>
+  </div>
+
+
+  <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <div class="footer-top">
+        <div>
+            <a href="index.html" class="footer-logo">REALM <span>/ SAM</span></a>
+            <p class="footer-tagline">"A space built from code, passion, and a little bit of spice."</p>
+            <div class="footer-socials">
+            <a href="mailto:samlisingisaac28@gmail.com" class="social-link" title="Email">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="https://github.com/pintsizedsalt" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/scenesizedsalt" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@scenesizedsalt" target="_blank" rel="noopener noreferrer" class="social-link" title="TikTok">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+            </div>
+        </div>
+        <div>
+            <div class="footer-col-title">Navigate</div>
+            <ul class="footer-links">
+            <li><a href="#nexus">Nexus — Home</a></li>
+            <li><a href="#arsenal">My Arsenal</a></li>
+            <li><a href="schema.html">Schema</a></li>
+            <li><a href="spice.html">Spice</a></li>
+            <li><a href="keyframe.html">Keyframe</a></li>
+            <li><a href="ethos.html">Ethos</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="footer-col-title">Sections</div>
+            <ul class="footer-links">
+            <li><a href="#arsenal">Skills & Traits</a></li>
+            <li><a href="schema.html">Projects</a></li>
+            <li><a href="spice.html">Recipes</a></li>
+            <li><a href="keyframe.html">Content</a></li>
+            <li><a href="ethos.html">Faith & Values</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="footer-col-title">Contact</div>
+            <div class="footer-contact-item">
+            <span class="contact-label">Email</span>
+            <a href="mailto:samlisingisaac28@gmail.com" class="contact-value">samlisingisaac28@gmail.com</a>
+            </div>
+            <div class="footer-contact-item">
+            <span class="contact-label">Based In</span>
+            <span class="contact-value">Philippines 🇵🇭</span>
+            </div>
+            <div class="footer-contact-item">
+            <span class="contact-label">Open For</span>
+            <span class="contact-value">Projects & Collabs</span>
+            </div>
+        </div>
+        </div>
+        <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 <span>Realm by Sam</span>. All rights reserved.</p>
+        <p class="footer-made">Designed & built by <span>Sam</span> with love.</p>
+        </div>
+    </footer>
+
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Hamburger menu
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+
+    // Animate skill bars on scroll
+    const bars = document.querySelectorAll('.skill-bar-fill');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          const width = bar.getAttribute('data-width');
+          bar.style.width = width + '%';
+          observer.unobserve(bar);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    bars.forEach(bar => observer.observe(bar));
+  </script>
+
+</body>
+</html>

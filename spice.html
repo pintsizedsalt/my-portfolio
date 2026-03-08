@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="spice.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Logo" class="nav-logo-img"/>
+      REALM <span>/ SAM</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Nexus</a></li>
+      <li><a href="index.html#arsenal">My Arsenal</a></li>
+      <li><a href="schema.html">Schema</a></li>
+      <li><a href="spice.html" class="active">Spice</a></li>
+      <li><a href="keyframe.html">Keyframe</a></li>
+      <li><a href="ethos.html">Ethos</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMenu()">Nexus</a>
+    <a href="index.html#arsenal" onclick="closeMenu()">My Arsenal</a>
+    <a href="schema.html" onclick="closeMenu()">Schema</a>
+    <a href="spice.html" class="active">Spice</a>
+    <a href="keyframe.html" onclick="closeMenu()">Keyframe</a>
+    <a href="ethos.html" onclick="closeMenu()">Ethos</a>
+    <a href="index.html#contact" onclick="closeMenu()">Contact</a>
+  </div>
+
+
+  <!-- ===================== HERO ===================== -->
+  <section id="spice-hero">
+    <div class="spice-hero-glow g1"></div>
+    <div class="spice-hero-glow g2"></div>
+    <div class="spice-hero-inner">
+      <div class="spice-hero-left">
+        <div class="spice-eyebrow">
+          <div class="spice-eyebrow-dot"></div>
+          <span class="spice-eyebrow-text">04 / Spice</span>
+        </div>
+        <h1 class="spice-title">
+          <span class="spice-title-sub">Where the kitchen gets loud.</span>
+          <span class="spice-title-main">My <span class="spice-title-accent">Spice.</span></span>
+        </h1>
+        <p class="spice-desc">This is a collection of recipes I personally cook and test. Most are inspired by food reels that I tweak in my own style, some are my own inventions, and a few are classic recipes na nilalagyan ko lang ng konting twist.</p>
+      </div>
+      <div class="spice-hero-right">
+        <div class="spice-stat-row">
+          <div class="spice-stat"><div class="spice-stat-num">∞</div><div class="spice-stat-lbl">Recipes Tried</div></div>
+          <div class="spice-stat"><div class="spice-stat-num">100%</div><div class="spice-stat-lbl">Sam-Approved</div></div>
+          <div class="spice-stat"><div class="spice-stat-num">0</div><div class="spice-stat-lbl">Gatekeeping</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== RECIPES ===================== -->
+  <section id="spice-recipes">
+    <div class="spice-section-tag">Recipe Compilation</div>
+
+    <div class="recipe-grid">
+
+      <!-- CARD 1 -->
+      <div class="recipe-card" onclick="openRecipe(0)">
+        <div class="recipe-scan"></div>
+        <div class="recipe-img-wrap">
+          <img src="SpicyButteredShrimp.jpg" alt="Spicy Garlic Butter Shrimp" class="recipe-img"/>
+          <div class="recipe-img-overlay"></div>
+          <div class="recipe-corner tl"></div><div class="recipe-corner tr"></div>
+          <div class="recipe-corner bl"></div><div class="recipe-corner br"></div>
+          <div class="recipe-badge">Seafood</div>
+          <div class="recipe-img-meta">
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 30 mins</div>
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Serves 2</div>
+          </div>
+          <div class="recipe-hover-hint">
+            <span class="recipe-hint-text">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              View Full Recipe
+            </span>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-title-row">
+            <h2 class="recipe-name">Spicy Garlic Butter Shrimp</h2>
+            <span class="recipe-difficulty easy">Easy</span>
+          </div>
+          <p class="recipe-desc-text">Savory, garlicky, at siksik sa butter with just the right amount of spice. Eto ang favorite ko lutuin kapag naghahanap ng "fancy" dinner pero literal na 15-20 minutes lang ang prep time.</p>
+          <div class="recipe-preview-pills">
+            <span class="recipe-preview-pill">2 lbs shrimp</span>
+            <span class="recipe-preview-pill">2 tbsp parsley</span>
+            <span class="recipe-preview-pill">1/2 cup Butter</span>
+            <span class="recipe-preview-pill">1 bulb garlic</span>
+            <span class="recipe-preview-more">+ more</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="recipe-card" onclick="openRecipe(1)">
+        <div class="recipe-scan"></div>
+        <div class="recipe-img-wrap">
+          <img src="sweetandsourtofu.jpg" alt="Sweet and Sour Tofu" class="recipe-img"/>
+          <div class="recipe-img-overlay"></div>
+          <div class="recipe-corner tl"></div><div class="recipe-corner tr"></div>
+          <div class="recipe-corner bl"></div><div class="recipe-corner br"></div>
+          <div class="recipe-badge">Viand</div>
+          <div class="recipe-img-meta">
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 40 mins</div>
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Serves 4</div>
+          </div>
+          <div class="recipe-hover-hint">
+            <span class="recipe-hint-text">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              View Full Recipe
+            </span>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-title-row">
+            <h2 class="recipe-name">Sweet and Sour Tofu</h2>
+            <span class="recipe-difficulty easy">Easy</span>
+          </div>
+          <p class="recipe-desc-text">A comforting, flavor-packed dish featuring tender tofu cubes simmered in a rich, velvety sweet and sour glaze. Infused with savory seaweed for an umami depth and fresh green chilies for a mild kick, this saucy delight is the perfect partner for a warm bowl of rice.</p>
+          <div class="recipe-preview-pills">
+            <span class="recipe-preview-pill">Ketchup</span>
+            <span class="recipe-preview-pill">Vinegar</span>
+            <span class="recipe-preview-pill">Sugar</span>
+            <span class="recipe-preview-pill">Soy Sauce</span>
+            <span class="recipe-preview-more">+ more</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="recipe-card" onclick="openRecipe(2)">
+        <div class="recipe-scan"></div>
+        <div class="recipe-img-wrap">
+          <img src="tofusisig.jpg" alt="tofu sisig" class="recipe-img"/>
+          <div class="recipe-img-overlay"></div>
+          <div class="recipe-corner tl"></div><div class="recipe-corner tr"></div>
+          <div class="recipe-corner bl"></div><div class="recipe-corner br"></div>
+          <div class="recipe-badge">Viand</div>
+          <div class="recipe-img-meta">
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 15 mins</div>
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Serves 1</div>
+          </div>
+          <div class="recipe-hover-hint">
+            <span class="recipe-hint-text">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              View Full Recipe
+            </span>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-title-row">
+            <h2 class="recipe-name">Tofu Sisig</h2>
+            <span class="recipe-difficulty easy">Easy</span>
+          </div>
+          <p class="recipe-desc-text">By mixing crispy, thick-cut fried tofu with raw onions and chilies, you get a perfect contrast of textures. Bound together with creamy mayonnaise and a zing of calamansi, this dish is topped with a runny egg and parsley for a restaurant-quality finish.</p>
+          <div class="recipe-preview-pills">
+            <span class="recipe-preview-pill">Tofu</span>
+            <span class="recipe-preview-pill">Onion</span>
+            <span class="recipe-preview-pill">Chilies</span>
+            <span class="recipe-preview-pill">Mayo</span>
+            <span class="recipe-preview-more">+ more</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="recipe-card" onclick="openRecipe(3)">
+        <div class="recipe-scan"></div>
+        <div class="recipe-img-wrap">
+          <img src="MimosaEggs.jpg" alt="Crispy Fried Mimosa Eggs" class="recipe-img"/>
+          <div class="recipe-img-overlay"></div>
+          <div class="recipe-corner tl"></div><div class="recipe-corner tr"></div>
+          <div class="recipe-corner bl"></div><div class="recipe-corner br"></div>
+          <div class="recipe-badge">Viand • Snack</div>
+          <div class="recipe-img-meta">
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 1 hr</div>
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 18–20 pcs</div>
+          </div>
+          <div class="recipe-hover-hint">
+            <span class="recipe-hint-text">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              View Full Recipe
+            </span>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-title-row">
+            <h2 class="recipe-name">Crispy Fried Mimosa Eggs</h2>
+            <span class="recipe-difficulty medium">Easy</span>
+          </div>
+          <p class="recipe-desc-text">Level up your snack game with these Crispy Fried Mimosa Eggs. This recipe takes hard-boiled eggs to the next level by breading and deep-frying the whites for a satisfying crunch.</p>
+          <div class="recipe-preview-pills">
+            <span class="recipe-preview-pill">Egg</span>
+            <span class="recipe-preview-pill">Breading</span>
+            <span class="recipe-preview-pill">Oil</span>
+            <span class="recipe-preview-more">+ more</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe(4)">
+        <div class="recipe-scan"></div>
+        <div class="recipe-img-wrap">
+          <img src="PestoChickenTenders.jpg" alt="Pesto Chicken Tenders" class="recipe-img"/>
+          <div class="recipe-img-overlay"></div>
+          <div class="recipe-corner tl"></div><div class="recipe-corner tr"></div>
+          <div class="recipe-corner bl"></div><div class="recipe-corner br"></div>
+          <div class="recipe-badge">Viand</div>
+          <div class="recipe-img-meta">
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 1 hr</div>
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 18–20 pcs</div>
+          </div>
+          <div class="recipe-hover-hint">
+            <span class="recipe-hint-text">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              View Full Recipe
+            </span>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-title-row">
+            <h2 class="recipe-name">Pesto Chicken Tenders</h2>
+            <span class="recipe-difficulty medium">medium</span>
+          </div>
+          <p class="recipe-desc-text">Elevate your classic chicken strips with the bold, aromatic flavors of basil and garlic. These Pesto Chicken Tenders are marinated in a rich pesto sauce before being breaded and fried to a perfect golden crunch.</p>
+          <div class="recipe-preview-pills">
+            <span class="recipe-preview-pill">Chicken Breast</span>
+            <span class="recipe-preview-pill">Pesto Sauce</span>
+            <span class="recipe-preview-pill">Salt & Pepper</span>
+            <span class="recipe-preview-more">+ more</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe(5)">
+        <div class="recipe-scan"></div>
+        <div class="recipe-img-wrap">
+          <img src="CrispyMangoChocoToast.jpg" alt="Crispy Mango-Choco Toast" class="recipe-img"/>
+          <div class="recipe-img-overlay"></div>
+          <div class="recipe-corner tl"></div><div class="recipe-corner tr"></div>
+          <div class="recipe-corner bl"></div><div class="recipe-corner br"></div>
+          <div class="recipe-badge">Snack • Dessert</div>
+          <div class="recipe-img-meta">
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 1 hr</div>
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 18–20 pcs</div>
+          </div>
+          <div class="recipe-hover-hint">
+            <span class="recipe-hint-text">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              View Full Recipe
+            </span>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-title-row">
+            <h2 class="recipe-name">Crispy Mango-Choco Toast</h2>
+            <span class="recipe-difficulty easy">easy</span>
+          </div>
+          <p class="recipe-desc-text">Experience a burst of tropical sweetness with this Crispy Mango-Choco Toast. These bread pockets are stuffed with a generous amount of ripe mango and a hint of chocolate, then coated in Panko breadcrumbs for an ultimate crunch.</p>
+          <div class="recipe-preview-pills">
+            <span class="recipe-preview-pill">Mango</span>
+            <span class="recipe-preview-pill">Chocolate</span>
+            <span class="recipe-preview-pill">Panko Breadcrumbs</span>
+            <span class="recipe-preview-more">+ more</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe(6)">
+        <div class="recipe-scan"></div>
+        <div class="recipe-img-wrap">
+          <img src="SipoEgg.jpg" alt="Creamy Sipo Egg" class="recipe-img"/>
+          <div class="recipe-img-overlay"></div>
+          <div class="recipe-corner tl"></div><div class="recipe-corner tr"></div>
+          <div class="recipe-corner bl"></div><div class="recipe-corner br"></div>
+          <div class="recipe-badge">Lunch • Dinner</div>
+          <div class="recipe-img-meta">
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 1 hr</div>
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 18–20 pcs</div>
+          </div>
+          <div class="recipe-hover-hint">
+            <span class="recipe-hint-text">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              View Full Recipe
+            </span>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-title-row">
+            <h2 class="recipe-name">Creamy Sipo Egg</h2>
+            <span class="recipe-difficulty easy">medium</span>
+          </div>
+          <p class="recipe-desc-text">Indulge in a classic Filipino favorite that’s all about texture and richness. This Sipo Egg features delicate quail eggs swimming in a thick, buttery cream sauce packed with savory ham and crisp mixed vegetables.</p>
+          <div class="recipe-preview-pills">
+            <span class="recipe-preview-pill">Quail Eggs</span>
+            <span class="recipe-preview-pill">All Purpose Cream</span>
+            <span class="recipe-preview-pill">Ham or Bacon</span>
+            <span class="recipe-preview-more">+ more</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe(7)">
+        <div class="recipe-scan"></div>
+        <div class="recipe-img-wrap">
+          <img src="ChickenChipotle.jpg" alt="Chicken Chipotle Wrap" class="recipe-img"/>
+          <div class="recipe-img-overlay"></div>
+          <div class="recipe-corner tl"></div><div class="recipe-corner tr"></div>
+          <div class="recipe-corner bl"></div><div class="recipe-corner br"></div>
+          <div class="recipe-badge">Snack • Viand</div>
+          <div class="recipe-img-meta">
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 1 hr</div>
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 18–20 pcs</div>
+          </div>
+          <div class="recipe-hover-hint">
+            <span class="recipe-hint-text">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              View Full Recipe
+            </span>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-title-row">
+            <h2 class="recipe-name">Chicken Chipotle Wrap</h2>
+            <span class="recipe-difficulty easy">easy</span>
+          </div>
+          <p class="recipe-desc-text">This budget-friendly meal is the perfect balance of healthy and hearty. It features spiced marinated chicken and a variety of crisp vegetables wrapped in a homemade low-calorie egg-based pita.</p>
+          <div class="recipe-preview-pills">
+            <span class="recipe-preview-pill">Chicken Breast</span>
+            <span class="recipe-preview-pill">Cucumber</span>
+            <span class="recipe-preview-pill">Calamansi</span>
+            <span class="recipe-preview-more">+ more</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe(8)">
+        <div class="recipe-scan"></div>
+        <div class="recipe-img-wrap">
+          <img src="CabbageRolls.jpg" alt="Steamed Chicken Cabbage Rolls" class="recipe-img"/>
+          <div class="recipe-img-overlay"></div>
+          <div class="recipe-corner tl"></div><div class="recipe-corner tr"></div>
+          <div class="recipe-corner bl"></div><div class="recipe-corner br"></div>
+          <div class="recipe-badge">Snack • Viand</div>
+          <div class="recipe-img-meta">
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 1 hr</div>
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 18–20 pcs</div>
+          </div>
+          <div class="recipe-hover-hint">
+            <span class="recipe-hint-text">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              View Full Recipe
+            </span>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-title-row">
+            <h2 class="recipe-name">Steamed Chicken Cabbage Rolls</h2>
+            <span class="recipe-difficulty medium">medium</span>
+          </div>
+          <p class="recipe-desc-text">A guilt-free delight that doesn't compromise on taste! These Chicken Cabbage Rolls feature a savory and juicy ground chicken filling seasoned with sesame and aromatics, all wrapped in tender, steamed cabbage leaves.</p>
+          <div class="recipe-preview-pills">
+            <span class="recipe-preview-pill">Pechay Baguio</span>
+            <span class="recipe-preview-pill">Ground Chicken</span>
+            <span class="recipe-preview-pill">Garlic</span>
+            <span class="recipe-preview-more">+ more</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe(9)">
+        <div class="recipe-scan"></div>
+        <div class="recipe-img-wrap">
+          <img src="TunaSisig.jpg" alt="Creamy Tuna Sisig" class="recipe-img"/>
+          <div class="recipe-img-overlay"></div>
+          <div class="recipe-corner tl"></div><div class="recipe-corner tr"></div>
+          <div class="recipe-corner bl"></div><div class="recipe-corner br"></div>
+          <div class="recipe-badge">Viand</div>
+          <div class="recipe-img-meta">
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 1 hr</div>
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 18–20 pcs</div>
+          </div>
+          <div class="recipe-hover-hint">
+            <span class="recipe-hint-text">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              View Full Recipe
+            </span>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-title-row">
+            <h2 class="recipe-name">Creamy Tuna Sisig</h2>
+            <span class="recipe-difficulty easy">easy</span>
+          </div>
+          <p class="recipe-desc-text">A sophisticated take on the beloved Filipino favorite. This Creamy Tuna Sisig replaces pork with lean tuna flakes, sautéed with aromatics and bound with a tangy, spicy mayonnaise dressing.</p>
+          <div class="recipe-preview-pills">
+            <span class="recipe-preview-pill">Can of Tuna Chunks</span>
+            <span class="recipe-preview-pill">Onion</span>
+            <span class="recipe-preview-pill">Mayonnaise</span>
+            <span class="recipe-preview-more">+ more</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe(10)">
+        <div class="recipe-scan"></div>
+        <div class="recipe-img-wrap">
+          <img src="MarryMeChicken.jpg" alt="Marry Me Chicken" class="recipe-img"/>
+          <div class="recipe-img-overlay"></div>
+          <div class="recipe-corner tl"></div><div class="recipe-corner tr"></div>
+          <div class="recipe-corner bl"></div><div class="recipe-corner br"></div>
+          <div class="recipe-badge">Viand</div>
+          <div class="recipe-img-meta">
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 1 hr</div>
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 18–20 pcs</div>
+          </div>
+          <div class="recipe-hover-hint">
+            <span class="recipe-hint-text">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              View Full Recipe
+            </span>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-title-row">
+            <h2 class="recipe-name">Marry Me Chicken</h2>
+            <span class="recipe-difficulty medium">medium</span>
+          </div>
+          <p class="recipe-desc-text">This dish is the definition of comfort food! It features tender, seared chicken bathed in a rich and velvety cream sauce infused with the deep flavors of sun-dried tomatoes and Parmesan. Topped with a sprinkle of vibrant parsley, it’s a sophisticated yet easy-to-make meal that lives up to its name.</p>
+          <div class="recipe-preview-pills">
+            <span class="recipe-preview-pill">Chicken Breast</span>
+            <span class="recipe-preview-pill">All-purpose cream</span>
+            <span class="recipe-preview-pill">butter</span>
+            <span class="recipe-preview-more">+ more</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-card" onclick="openRecipe(11)">
+        <div class="recipe-scan"></div>
+        <div class="recipe-img-wrap">
+          <img src="MangoRice.jpg" alt="Mango Sticky Rice" class="recipe-img"/>
+          <div class="recipe-img-overlay"></div>
+          <div class="recipe-corner tl"></div><div class="recipe-corner tr"></div>
+          <div class="recipe-corner bl"></div><div class="recipe-corner br"></div>
+          <div class="recipe-badge">Dessert</div>
+          <div class="recipe-img-meta">
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 1 hr</div>
+            <div class="recipe-meta-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 18–20 pcs</div>
+          </div>
+          <div class="recipe-hover-hint">
+            <span class="recipe-hint-text">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              View Full Recipe
+            </span>
+          </div>
+        </div>
+        <div class="recipe-body">
+          <div class="recipe-title-row">
+            <h2 class="recipe-name">Mango Sticky Rice</h2>
+            <span class="recipe-difficulty medium">medium</span>
+          </div>
+          <p class="recipe-desc-text">This beloved Southeast Asian classic is the perfect marriage of creamy coconut-infused rice and sweet, sun-ripened mango. Each bite offers a velvety texture and a tropical sweetness that is both refreshing and deeply satisfying—a true comfort dessert for any occasion.</p>
+          <div class="recipe-preview-pills">
+            <span class="recipe-preview-pill">Coconut Milk</span>
+            <span class="recipe-preview-pill">Glutinous Rice</span>
+            <span class="recipe-preview-pill">Mango</span>
+            <span class="recipe-preview-more">+ more</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== MORE COMING SOON ===================== -->
+  <div class="spice-more-soon">
+    <div class="spice-more-line"></div>
+    <div class="spice-more-box">
+      <span class="tl"></span><span class="tr"></span>
+      <span class="bl"></span><span class="br"></span>
+      <div class="spice-more-dots">
+        <span class="spice-more-dot"></span>
+        <span class="spice-more-label">More In The Kitchen</span>
+        <span class="spice-more-dot delay"></span>
+      </div>
+      <p class="spice-more-text">More recipes are being tested and documented.<br/>Check back soon.</p>
+      <div class="spice-more-sub">&mdash;&nbsp; still cooking &nbsp;&mdash;</div>
+    </div>
+    <div class="spice-more-line"></div>
+  </div>
+
+
+  <!-- ===================== MODAL ===================== -->
+  <div class="spice-modal-bg" id="spiceModalBg" onclick="closeRecipe()"></div>
+  <div class="spice-modal" id="spiceModal">
+    <div class="spice-modal-inner">
+      <button class="spice-modal-close" onclick="closeRecipe()">&#x2715;</button>
+      <div class="spice-modal-img">
+        <img id="mImg" src="" alt=""/>
+        <div class="spice-modal-img-fade"></div>
+        <div class="spice-modal-img-badge" id="mBadge"></div>
+      </div>
+      <div class="spice-modal-body">
+        <div class="spice-modal-header">
+          <h2 class="spice-modal-title" id="mTitle"></h2>
+          <span class="recipe-difficulty" id="mDiff"></span>
+        </div>
+        <div class="spice-modal-meta" id="mMeta"></div>
+        <p class="spice-modal-desc" id="mDesc"></p>
+        <div class="spice-modal-divider"></div>
+        <div class="spice-modal-label">Ingredients</div>
+        <div class="spice-modal-pills" id="mIngredients"></div>
+        <div class="spice-modal-divider"></div>
+        <div class="spice-modal-label">Procedure</div>
+        <div class="spice-modal-steps" id="mSteps"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">REALM <span>/ SAM</span></a>
+        <p class="footer-tagline">"A space built from code, passion, and a little bit of spice."</p>
+        <div class="footer-socials">
+          <a href="mailto:samlisingisaac28@gmail.com" class="social-link" title="Email">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://github.com/pintsizedsalt" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/scenesizedsalt" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@scenesizedsalt" target="_blank" rel="noopener noreferrer" class="social-link" title="TikTok">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Nexus — Home</a></li>
+          <li><a href="index.html#arsenal">My Arsenal</a></li>
+          <li><a href="schema.html">Schema</a></li>
+          <li><a href="spice.html">Spice</a></li>
+          <li><a href="keyframe.html">Keyframe</a></li>
+          <li><a href="ethos.html">Ethos</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Sections</div>
+        <ul class="footer-links">
+          <li><a href="index.html#arsenal">Profile</a></li>
+          <li><a href="schema.html">Projects</a></li>
+          <li><a href="spice.html">Recipes</a></li>
+          <li><a href="keyframe.html">Content</a></li>
+          <li><a href="ethos.html">Faith & Values</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item"><span class="contact-label">Email</span><a href="mailto:samlisingisaac28@gmail.com" class="contact-value">samlisingisaac28@gmail.com</a></div>
+        <div class="footer-contact-item"><span class="contact-label">Based In</span><span class="contact-value">Philippines 🇵🇭</span></div>
+        <div class="footer-contact-item"><span class="contact-label">Open For</span><span class="contact-value">Projects & Collabs</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 <span>Realm by Sam</span>. All rights reserved.</p>
+      <p class="footer-made">Designed & built by <span>Sam</span> with love.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+    function closeMenu()  { document.getElementById('mobileMenu').classList.remove('open'); }
+
+    // ===================== RECIPE DATA =====================
+    const recipes = [
+      {
+        title: 'Spicy Garlic Butter Shrimp',
+        badge: 'Seafood',
+        difficulty: 'easy',
+        time: '15 mins',
+        serves: 'Serves 2',
+        img: 'SpicyButteredShrimp.jpg',
+        desc: 'Savory, garlicky, at siksik sa butter with just the right amount of spice. Eto ang favorite ko lutuin kapag naghahanap ng "fancy" dinner pero literal na 15-20 minutes lang ang prep time.',
+        ingredients: ['2 lbs cleaned shrimp','2 tbsp chopped parsley','1/cup butter','1 bulb minced garlic','1/2 cup 7-Up / Sprite','1 tsp calamansi / lemon juice','salt','pepper','1/2 tbsp olive oil','2 chopped red chilli (optional)'],
+        steps: [
+          'Heat your 1tbsp olive oil to a pan over medium heat then melt your butter.',
+          'Add the minced garlic. Cook in low heat until the color turns light brown or depends what softness of garlic you want.',
+          'Put-in the cleaned shrimp. Adjust heat to high. Stir-fry until half of the shrimp turns orange.',
+          'Add the soda you have. Cook until the shrimp is fully orange and the sauce thickens slightly or depends on how saucy you want it.',
+          'Add your salt and pepper to taste. Stir in the calamansi / lemon juice, depends on how you want it. If you want it spicy, add the chopped red chilli and stir for 30 seconds.',
+          'Taste and adjust it to your preferred taste.',
+          'Finish with fresh parsley for garnish. Serve immediately and devour.'
+        ]
+      },
+      {
+        title: 'Sweet and Sour Tofu',
+        badge: 'Main Dish · Quick Meal',
+        difficulty: 'easy',
+        time: '40 mins',
+        serves: 'Serves 4',
+        img: 'sweetandsourtofu.jpg',
+        desc: 'A comforting, flavor-packed dish featuring tender tofu cubes simmered in a rich, velvety sweet and sour glaze. Infused with savory seaweed for an umami depth and fresh green chilies for a mild kick, this saucy delight is the perfect partner for a warm bowl of rice.',
+        ingredients: ['1/2 cup ketchup','1 chopped onion','4 cloves garlic','soy sauce','water','cornstarch','salt','pepper','green chilli','1 sheet nori seaweed','2 blocks firm tofu','cooking oil','sugar','fish sauce (optional)', 'chicken or pork (optional)'],
+        steps: [
+          'Pat the tofu dry with a paper towel to remove excess moisture. Cut into thick spam-like slices. If using chicken or pork, slice them into bite-sized pieces. Lightly season with salt and pepper.',
+          'Heat oil in a pan over medium heat. Fry the tofu (and meat if you have) until they are lightly golden. For a softer, "saucy" texture, avoid over-frying or heavy breading.',
+          'Cut your cooked tofu using scissorsinto smaller bite-sized pieces and set aside.',
+          'In the same pan (remove excess oil), sauté the garlic and onions until fragrant and translucent.',
+          'Pour in your mixture of ketchup, vinegar, sugar, soy sauce, and water with cornstarch. Stir continuously over low heat until the sauce thickens and becomes glossy. Adjust the balance of sweet, sour, and salty to your liking. If you have fish sauce, add a splash for extra umami.',
+          'Add the fried tofu and meat back into the pan. Toss gently for 1-2 minutes, allowing the tofu to absorb the sweet and sour glaze.',
+          'Transfer to a serving plate. Top generously with seaweed strips and sliced green chilies for that extra kick. Serve and enjoy with steamed rice.'
+        ]
+      },
+      {
+        title: 'Tofu Sisig',
+        badge: 'Viand',
+        difficulty: 'easy',
+        time: '30 mins',
+        serves: 'Serves 4-5',
+        img: 'tofusisig.jpg',
+        desc: 'By mixing crispy, thick-cut fried tofu with raw onions and chilies, you get a perfect contrast of textures. Bound together with creamy mayonnaise and a zing of calamansi, this dish is topped with a runny egg and parsley for a restaurant-quality finish.',
+        ingredients: ['2-3 blocks firm tofu','1 chopped onion','chopped red chillies','chopped green chillies','cooking oil','soy sauce','salt & pepper','parsley','mayonnaise', 'calamansi or lemon juice','meat option: pork, or chicken thigh (optional)', 'fried egg (optional)'],
+        steps: [
+          'Pat the tofu slabs dry. Instead of small cubes, slice the tofu into thick, spam-like slabs. This makes them much easier to flip and prevents them from breaking apart while frying.',
+          'Fill up your pan with enough oil to generously shallow fry the tofu. Heat over medium until the oil is hot but not smoking.',
+          'Fry them in a pan until both sides are golden brown and firm. Flip carefully using tongs or a spatula. Avoid overcrowding the pan to ensure even frying. Once done, set aside on a paper towel-lined plate to drain excess oil.',
+          'Once slightly cooled, cut the tofu into bite-sized cubes.',
+          'In a large mixing bowl, combine the chopped onions, green chilies, and red chilies. Add the tofu cubes (and your fried meat if using). Squeeze the calamansi over the mixture, then add the mayonnaise, soy sauce, salt, and pepper to taste.',
+          'Transfer to a plate. Drizzle with more mayonnaise, then top with a sunny-side-up egg and parsley. Serve immediately with steamed rice and enjoy the explosion of flavors and textures in every bite.'
+        ]
+      },
+      {
+        title: 'Crispy Fried Mimosa Eggs',
+        badge: 'Viand • Snack',
+        difficulty: 'easy',
+        time: '30 mins',
+        serves: 'Serves 2',
+        img: 'MimosaEggs.jpg',
+        desc: 'Level up your snack game with these Crispy Fried Mimosa Eggs. This recipe takes hard-boiled eggs to the next level by breading and deep-frying the whites for a satisfying crunch. The creamy yolks are seasoned with a touch of salt and pepper, making them the perfect savory treat for any time of day.',
+        ingredients: ['6 large hard-boiled eggs (depends kung ilan kayo)','All-purpose flour','salt & pepper','2 whisked eggs','breadcrumbs','cooking oil','mayonnaise','paprika','cayenne','calamansi', 'parsley (optional)'],
+        steps: [
+          'Peel your hard-boiled eggs and cut them in half lengthwise. Carefully scoop out the yolks and place them in a separate bowl.',
+          'Coat the empty egg whites in the seasoned flour. Dip them into the whisked eggs. Roll them in breadcrumbs until fully covered.',
+          'Deep fry or shallow fry the breaded egg whites in hot cooking oil until they are golden brown and crispy. Drain on paper towels and let them cool slightly.',
+          'While the whites are cooling, mix the mashed egg yolks with mayonnaise, paprika, cayenne, and a squeeze of calamansi. Season with salt and pepper.',
+          'For that "Mimosa" look, put the yolk mixture into a piping bag with a star tip (or just use a spoon). Pipe the mixture back into the centers of the crispy fried egg whites.',
+          'Transfer to a serving plate. Garnish with fresh spring onions or parsley on top. Serve.'
+        ]
+      },
+      {
+        title: 'Pesto Chicken Tenders',
+        badge: 'Viand',
+        difficulty: 'moderate',
+        time: '3 hours (including marination)',
+        serves: 'Serves 2-3',
+        img: 'PestoChickenTenders.jpg',
+        desc: 'Elevate your classic chicken strips with the bold, aromatic flavors of basil and garlic. These Pesto Chicken Tenders are marinated in a rich pesto sauce before being breaded and fried to a perfect golden crunch.',
+        ingredients: ['Chicken Breast (Cut into Strips)','pesto sauce','if making from scratch:Blend fresh basil, garlic, nuts (cashews or walnuts), parmesan cheese, and olive oil','salt & pepper','calamansi','parsley','cooking oil', 'all-purpose flour','whisked eggs','breadcrumbs'],
+        steps: [
+          'In a bowl, coat the chicken strips thoroughly with the pesto sauce and calamansi juice. Let it sit for at least 1 hour (or overnight in the fridge) to ensure the herbal flavor penetrates the meat.',
+          'Dredge each marinated strip in flour. OPTIONAL: Dip in whisked eggs, then coat with breadcrumbs.',
+          'Heat oil over medium heat. Fry the tenders until they reach a deep golden brown color. Since chicken breast cooks fast, don\'t overfry to keep the inside juicy.',
+          'Place on a wire rack or paper towels to remove excess oil.',
+          'Top with finely chopped spring onions or parsley, similar to your photo, for a fresh pop of color and serve.',
+        ]
+      },
+      {
+        title: 'Crispy Mango-Choco Toast',
+        badge: 'Snack • Dessert',
+        difficulty: 'easy',
+        time: '30-40mins',
+        serves: 'Serves 2-3',
+        img: 'CrispyMangoChocoToast.jpg',
+        desc: 'Experience a burst of tropical sweetness with this Crispy Mango-Choco Toast. These bread pockets are stuffed with a generous amount of ripe mango and a hint of chocolate, then coated in Panko breadcrumbs for an ultimate crunch.',
+        ingredients: ['Mango (Diced)','sliced bread','Chocolate Chips','Breadcrumbs','Eggs','Vanilla Extract','Salt','cooking oil'],
+        steps: [
+          'Use a rolling pin or a clean bottle to flatten each slice of white bread. You may remove the crusts if you prefer a cleaner look.',
+          'Take a single slice of white bread and lightly flatten the center with your thumb or a spoon to create a small "well" for the toppings.',
+          'Place a spoonful of sliced or mashed fresh mango and a small amount of chocolate spread in the center. Ensure the mango is the star of the filling for that perfect balance of sweetness and tang. Add another bread slice on top to create a sandwich. Press the edges firmly using a forkto seal the filling inside.',
+          'Carefully dip the entire sandwich into the whisked eggs.',
+          'Press the slice firmly into the Panko breadcrumbs, ensuring the crumbs coat the top, bottom, and sides to lock the filling in place.',
+          'Heat oil in a pan over medium heat. Fry the bread until it is golden brown and "super crispy" on both sides. Be gentle when flipping to prevent the filling from spilling out.',
+          'Remove excess oil by placing the toast on a paper towel-lined plate. Let it cool slightly.',
+          'Transfer to a serving plate. Drizzle with extra chocolate sauce and add a fresh mango garnish on top to complete the look.'
+        ]
+      },
+      {
+        title: 'Creamy Sipo Egg',
+        badge: 'Lunch • Dinner',
+        difficulty: 'medium',
+        time: '30mins',
+        serves: 'Serves 2-3',
+        img: 'SipoEgg.jpg',
+        desc: 'Indulge in a classic Filipino favorite that’s all about texture and richness. This Sipo Egg features delicate quail eggs swimming in a thick, buttery cream sauce packed with savory ham and crisp mixed vegetables.',
+        ingredients: ['20 Quail Eggs','All Purpose Cream','Ham or Bacon','Mixed Vegetables','4 cloves Garlic','1 chopped onion','Salt','cooking oil', 'butter','black pepper','evaporated milk (optional)', 'chopped spring onions'],
+        steps: [
+          'Heat your pan to medium high heat. Put a tiny bit of cooking oil before melting your butter. auté the garlic and onions until fragrant.',
+          'Add the diced ham (or bacon). Cook until the ham (or bacon) is slightly browned.',
+          'Toss in the mixed carrots, peas, and corn. Stir-fry for 2-3 minutes until tender.',
+          'Pour in the heavy cream and evaporated milk. Bring to a gentle simmer—do not let it boil rapidly to avoid curdling the dairy. Season with salt and pepper to taste.',
+          'Add the boiled quail eggs into the sauce. Let them simmer for a few minutes so they soak up the creamy flavor.',
+          'Stir in the cornstarch slurry (if it lacks thickness). Continue stirring until the sauce reaches a thick, velvety consistency that coats the back of a spoon.',
+          'Transfer to a serving bowl and top with plenty of chopped spring onions. Serve with steamed rice for a comforting meal.'
+        ]
+      },
+      {
+        title: 'Chicken Chipotle Wrap',
+        badge: 'Lunch • Dinner',
+        difficulty: 'easy',
+        time: '2 hours (including marination)',
+        serves: 'Serves 2-3',
+        img: 'ChickenChipotle.jpg',
+        desc: 'This budget-friendly meal is the perfect balance of healthy and hearty. It features spiced marinated chicken and a variety of crisp vegetables wrapped in a homemade low-calorie egg-based pita.',
+        ingredients: ['Chicken Breast (Diced)','Lettuce','Chopped Tomatoes','Minced Onions','Chipotle Sauce:Yogurt (or mayonnaise), salt, pepper, paprika, calamansi','Egg-based Pita:Eggs, flour, coconut oil','chopped red bell peppers','chopped cucumbers','cooking oil', 'basil'],
+        steps: [
+          'Combine the chopped chicken with calamansi, salt, pepper, paprika, basil, and cayenne. Let it sit for at least 1 hour or a day to absorb the spices.',
+          'Whisk the egg, flour, and coconut oil until smooth. Pour a thin layer onto a non-stick pan over medium heat. Cook until both sides are lightly browned and flexible.',
+          'In the same pan, sauté the marinated chicken until fully cooked and slightly charred on the edges for extra flavor.',
+          'Carefully dip the entire sandwich into the whisked eggs.',
+          'Mix the yogurt (or mayo) with calamansi, salt, pepper, and paprika. Stir until smooth and creamy. This will be your chipotle sauce.',
+          'Lay the pita flat. Layer the lettuce, cucumber, tomatoes, bell peppers, onions, and cooked chicken in the center.',
+          'Drizzle your zesty sauce over the fillings. Roll the pita tightly (you can use foil to hold it together and enjoy!'
+        ]
+      },
+      {
+        title: 'Steamed Chicken Cabbage Rolls',
+        badge: 'Snack • Viand',
+        difficulty: 'medium',
+        time: '2 hours',
+        serves: 'Serves 2-3',
+        img: 'CabbageRolls.jpg',
+        desc: 'A guilt-free delight that doesn\'t compromise on taste! These Chicken Cabbage Rolls feature a savory and juicy ground chicken filling seasoned with sesame and aromatics, all wrapped in tender, steamed cabbage leaves.',
+        ingredients: ['Napa Cabbage (Or Pechay Baguio)','Ground Chicken','4 Cloves of Garlic','Chopped Onion','Soy Sauce','Chopped Spring Onions','Sesame Oil','Coconut Oil','Salt & Pepper','Calamansi','grated ginger', 'egg','flour','chopped carrots (optional)', 'chopped chillies (optional)'],
+        steps: [
+          'Carefully peel off the cabbage leaves. Place them in boiling water for 1-2 minutes until they become soft and pliable. Drain and set aside.',
+          'In a bowl, combine the ground chicken, garlic, onion, spring onions, soy sauce, sesame oil, calamansi egg, and flour. Season with salt and pepper or whatever seasonings you have, then mix thoroughly.',
+          'Lay a blanched cabbage leaf flat. Place a spoonful of the chicken mixture near the stem end. Roll it up tightly, folding the sides inward like a burrito.',
+          'Arrange the rolls in a steamer basket with the seam side down. Steam over medium heat for 30-40 minutes or until the chicken filling is fully cooked.',
+          'While steaming, whisk together all the sauce ingredients which is soy sauce, sesame oil, calamansi, grated ginger, and chopped chillies if you have, in a bowl. Adjust the flavors to your liking.',
+          'Transfer the rolls to a plate and serve hot with the soy-ginger dipping sauce on the side.',
+        ]
+      },
+      {
+        title: 'Creamy Tuna Sisig',
+        badge: 'Viand',
+        difficulty: 'easy',
+        time: '20mins',
+        serves: 'Serves 2',
+        img: 'TunaSisig.jpg',
+        desc: 'A sophisticated take on the beloved Filipino favorite. This Creamy Tuna Sisig replaces pork with lean tuna flakes, sautéed with aromatics and bound with a tangy, spicy mayonnaise dressing.',
+        ingredients: ['1-2 cans of Tuna Chunks (drained thoroughly)','4 Cloves of Garlic','Chopped Onion','Soy Sauce','Chopped Spring Onions','Mayonnaise','Calamansi','Salt & Pepper','Sliced Green or Red Chillies','Sliced Fresh Tomatoes', 'Parsley', 'cooking oil'],
+        steps: [
+          'Heat a small amount of oil in a pan. Sauté the garlic and onions until the onions are soft and translucent.',
+          'Add the drained tuna flakes. Cook for 3-5 minutes until the tuna is slightly toasted but not dry.',
+          'Turn off the heat. Stir in the mayonnaise, soy sauce, and calamansi juice. Add the chopped chilies, salt, and pepper. Mix until everything is well-combined and creamy.',
+          'Use two large spoons. Scoop a portion of the tuna mixture into one spoon. Pass the mixture back and forth between the two spoons, smoothing the sides until it forms an oval/football shape. Carefully slide it onto the plate. Repeat for 3 scoops.',
+          'Arrange the three tuna scoops on one side of the plate. Place a mold of rice in the center and arrange your sliced tomatoes neatly on the other side.',
+          'Top the tuna scoops with fresh chili slices and sprinkle the rice with chopped parsley.',
+        ]
+      },
+      {
+        title: 'Marry Me Chicken',
+        badge: 'Viand',
+        difficulty: 'medium',
+        time: '50mins',
+        serves: 'Serves 2-3',
+        img: 'MarryMeChicken.jpg',
+        desc: 'This dish is the definition of comfort food! It features tender, seared chicken bathed in a rich and velvety cream sauce infused with the deep flavors of sun-dried tomatoes and Parmesan. Topped with a sprinkle of vibrant parsley, it’s a sophisticated yet easy-to-make meal that lives up to its name.',
+        ingredients: ['Chicken Breast','4 Cloves of Garlic','butter','calamansi','Dried Oregano','All-purpose flour','chicken broth or water','heavy cream or all purpose cream','grated cheese','chopped sun-dried tomatoes','chilli flakes','Parsley', 'cooking oil'],
+        steps: [
+          'Sprinkle salt, pepper, calamansi, and oregano on both sides of the chicken. Lightly dredge each piece in flour.',
+          'Heat oil and butter in a pan over to medium heat. Fry the chicken until golden brown on both sides. Remove from the pan and set aside.',
+          'In the same pan, sauté the garlic until fragrant. Add the sun-dried tomatoes and red chili flakes.',
+          'Pour in the chicken broth or water and let it simmer slightly to scrape up the flavorful bits from the bottom of the pan.',
+          'Lower the heat and stir in the cream and parmesan or normal grated cheese. Stir gently until the sauce is smooth and slightly thickened.',
+          'Return the chicken to the pan. Let it simmer for 3–5 minutes until the chicken is fully cooked and well-coated in the sauce.',
+          'Transfer to a serving bowl and garnish with plenty of fresh parsley for a vibrant finish. Serve and Enjoy!'
+        ]
+      },
+      {
+        title: 'Mango Sticky Rice',
+        badge: 'Dessert',
+        difficulty: 'medium',
+        time: '1 hour',
+        serves: 'Serves 2',
+        img: 'MangoRice.jpg',
+        desc: 'This beloved Southeast Asian classic is the perfect marriage of creamy coconut-infused rice and sweet, sun-ripened mango. Each bite offers a velvety texture and a tropical sweetness that is both refreshing and deeply satisfying—a true comfort dessert for any occasion.',
+        ingredients: ['Glutinous (sticky) rice','Coconut milk','sugar','salt','ripe mangoes','water'],
+        steps: [
+          'Rinse the malagkit 2-3 times until the water is relatively clear.',
+          'In a pot or kawali, combine the rice, coconut milk, water, sugar, and salt.',
+          'Bring it to a boil, then immediately lower the heat. Let it simmer gently, stirring occasionally so the bottom doesn\'t burn (since the sugar makes it sticky!).',
+          'Once the liquid is mostly absorbed and the rice is tender, turn off the heat. Cover the pot and let it "rest" for 10 minutes to finish steaming.',
+          'Scoop it into your heart mold, plate it with the mangoes, and drizzle a little extra coconut milk on top if you like it extra saucy. Serve and Enjoy!'
+        ]
+      },
+      
+    ];
+
+    // ===================== MODAL LOGIC =====================
+    function openRecipe(idx) {
+      const r = recipes[idx];
+
+      document.getElementById('mImg').src       = r.img;
+      document.getElementById('mImg').alt       = r.title;
+      document.getElementById('mBadge').textContent = r.badge;
+      document.getElementById('mTitle').textContent = r.title;
+      document.getElementById('mDesc').textContent  = r.desc;
+
+      const diff = document.getElementById('mDiff');
+      diff.textContent = r.difficulty.charAt(0).toUpperCase() + r.difficulty.slice(1);
+      diff.className   = 'recipe-difficulty ' + r.difficulty;
+
+      document.getElementById('mMeta').innerHTML = `
+        <div class="spice-modal-meta-item">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          ${r.time}
+        </div>
+        <div class="spice-modal-meta-item">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          ${r.serves}
+        </div>
+      `;
+
+      document.getElementById('mIngredients').innerHTML =
+        r.ingredients.map(i => `<span class="spice-modal-pill">${i}</span>`).join('');
+
+      document.getElementById('mSteps').innerHTML =
+        r.steps.map((s, i) => `
+          <div class="spice-modal-step">
+            <span class="spice-modal-step-num">${String(i+1).padStart(2,'0')}</span>
+            <p class="spice-modal-step-text">${s}</p>
+          </div>
+        `).join('');
+
+      document.getElementById('spiceModalBg').classList.add('open');
+      document.getElementById('spiceModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeRecipe() {
+      document.getElementById('spiceModalBg').classList.remove('open');
+      document.getElementById('spiceModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeRecipe(); });
+  </script>
+
+</body>
+</html>
